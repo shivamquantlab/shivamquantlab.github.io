@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shivam Malik — Statistics graduate, aspiring data professional and creative problem solver.">
+  <meta name="theme-color" content="#0b0d12">
+  <title>Shivam Malik — Portfolio</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+    :root{--bg:#0b0d12;--panel:#121620;--panel2:#171d29;--text:#f4f6fb;--muted:#9aa4b5;--line:rgba(255,255,255,.10);--lime:#c6f36b;--cyan:#7be7df;--max:1120px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(123,231,223,.09),transparent 32%),radial-gradient(ellipse at 10% 20%,rgba(198,243,107,.07),transparent 28%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font-weight:800;letter-spacing:-.06em;font-size:1.25rem}.brand span{color:var(--lime)}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:.86rem}.navlinks a:hover,.textlink:hover{color:var(--lime)}
+    .eyebrow{font:500 .72rem 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
+    .hero{padding:100px 0 88px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}
+    h1{font-size:clamp(3.1rem,8vw,6.7rem);line-height:.98;letter-spacing:-.085em;margin:18px 0 25px;max-width:800px}
+    h1 em{font-style:normal;color:var(--lime)}.intro{color:var(--muted);font-size:1.08rem;max-width:630px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:999px;font-weight:800;font-size:.86rem;border:1px solid var(--line);transition:.2s}
+    .btn.primary{background:var(--lime);color:#11170b;border-color:var(--lime)}.btn:hover{transform:translateY(-3px)}.btn.secondary:hover{border-color:var(--lime)}
+    .hero-card{background:linear-gradient(145deg,#1c2531,#10141d);border:1px solid var(--line);border-radius:26px;padding:25px;position:relative;overflow:hidden;min-height:310px}
+    .hero-card:after{content:"";position:absolute;width:190px;height:190px;border:1px solid rgba(198,243,107,.3);border-radius:50%;right:-45px;top:-50px;box-shadow:0 0 0 25px rgba(198,243,107,.035),0 0 0 55px rgba(198,243,107,.025)}
+    .monogram{width:74px;height:74px;border-radius:22px;background:var(--lime);color:#10150b;display:grid;place-items:center;font-size:1.65rem;font-weight:800;letter-spacing:-.08em}
+    .card-label{font: .7rem 'DM Mono',monospace;color:var(--muted);letter-spacing:.12em;margin-top:45px}.card-title{font-size:1.55rem;font-weight:800;line-height:1.2;margin-top:9px;max-width:260px}
+    .availability{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:.78rem;margin-top:20px}.dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime)}
+    section{padding:78px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:32px}
+    h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.065em;line-height:1.05;margin:10px 0 0}.section-note{max-width:390px;color:var(--muted);font-size:.9rem}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}.panel p{color:var(--muted);margin:10px 0 0}.statrow{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{background:var(--panel2);border-radius:16px;padding:18px}.stat strong{display:block;font-size:1.8rem;letter-spacing:-.06em}.stat span{font-size:.76rem;color:var(--muted)}
+    .tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.tag{font: .72rem 'DM Mono',monospace;border:1px solid var(--line);padding:8px 11px;border-radius:99px;color:#d8dfeb}
+    .timeline{display:grid;gap:12px}.item{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:23px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.date{font: .72rem 'DM Mono',monospace;color:var(--lime);text-transform:uppercase;letter-spacing:.08em}.item h3{margin:0;font-size:1.05rem}.item p{margin:6px 0 0;color:var(--muted);font-size:.9rem}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}.skill .num{font: .7rem 'DM Mono',monospace;color:var(--lime)}.skill h3{margin:12px 0 5px}.skill p{color:var(--muted);font-size:.83rem;margin:0}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.project{background:linear-gradient(145deg,#171e2a,#10141c);border:1px solid var(--line);border-radius:20px;padding:24px;min-height:205px;display:flex;flex-direction:column;justify-content:space-between}.project h3{font-size:1.2rem;margin:12px 0 5px}.project p{color:var(--muted);font-size:.87rem;margin:0}.project a{color:var(--lime);font-size:.82rem;font-weight:800;margin-top:20px}
+    .contact{background:linear-gradient(120deg,rgba(198,243,107,.10),rgba(123,231,223,.06));border:1px solid var(--line);border-radius:26px;padding:clamp(25px,5vw,55px);display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{max-width:570px}.contact p{color:var(--muted)}
+    footer{padding:30px 0;color:var(--muted);font-size:.78rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
+    @media(max-width:760px){.nav{height:auto;padding:18px 0;align-items:flex-start}.navlinks{gap:12px;flex-wrap:wrap;justify-content:flex-end;font-size:.75rem;max-width:210px}.hero{grid-template-columns:1fr;padding:72px 0 60px;gap:35px}.hero-card{min-height:260px}.about-grid,.skills,.projects{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:15px}.item{grid-template-columns:1fr;gap:7px}.contact{display:block}.contact .btn{margin-top:12px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <a class="brand" href="#home">SHIVAM<span>.</span></a>
+    <nav class="navlinks" aria-label="Main navigation">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="wrap hero" id="home">
+      <div class="reveal">
+        <div class="eyebrow">Portfolio / 2026 — 2027</div>
+        <h1>Curious mind.<br><em>Analytical</em> approach.</h1>
+        <p class="intro">I'm Shivam Malik, a Statistics graduate building practical skills in programming and data-focused problem solving. I bring together analytical thinking, communication and a creative mindset.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">Explore my work ↗</a>
+          <a class="btn secondary" href="resume.pdf" download>Download CV ↓</a>
+        </div>
+      </div>
+      <aside class="hero-card reveal">
+        <div class="monogram">SM</div>
+        <div class="card-label">CURRENT FOCUS</div>
+        <div class="card-title">Statistics · Python · Data & Technology</div>
+        <div class="availability"><span class="dot"></span> Open to learning and opportunities</div>
+      </aside>
+    </div>
+
+    <section id="about"><div class="wrap">
+      <div class="section-head reveal"><div><div class="eyebrow">01 / About</div><h2>A little about me.</h2></div><p class="section-note">A foundation in statistics, experience working with people, and a growing interest in technology.</p></div>
+      <div class="about-grid">
+        <div class="panel reveal"><div class="eyebrow">PROFILE</div><p>I completed a BSc in Statistics and am developing my programming and technical skills through consistent practice and projects. I enjoy learning by building, explaining ideas clearly and solving problems step by step.</p><div class="tags"><span class="tag">Statistics graduate</span><span class="tag">Problem solving</span><span class="tag">Continuous learner</span></div></div>
+        <div class="statrow reveal"><div class="stat"><strong>6.86</strong><span>BSc CGPA</span></div><div class="stat"><strong>3 yrs</strong><span>Teaching experience</span></div><div class="stat"><strong>2 yrs</strong><span>Video editing experience</span></div><div class="stat"><strong>2024</strong><span>Graduation year</span></div></div>
+      </div>
+    </div></section>
+
+    <section id="skills"><div class="wrap">
+      <div class="section-head reveal"><div><div class="eyebrow">02 / Skills</div><h2>Tools & strengths.</h2></div><p class="section-note">A developing skill set. This section should be updated as you complete projects and gain practical experience.</p></div>
+      <div class="skills">
+        <article class="skill reveal"><div class="num">01 — ANALYTICAL</div><h3>Statistics</h3><p>Statistical foundations, quantitative thinking and structured problem solving.</p></article>
+        <article class="skill reveal"><div class="num">02 — PROGRAMMING</div><h3>Python</h3><p>Beginner-level learning: core syntax, conditions, loops and small practice programs.</p></article>
+        <article class="skill reveal"><div class="num">03 — PRODUCTIVITY</div><h3>MS Excel</h3><p>Spreadsheet work, data organization and everyday productivity tasks.</p></article>
+        <article class="skill reveal"><div class="num">04 — COMMUNICATION</div><h3>Teaching</h3><p>Explaining concepts, communicating clearly and supporting learners.</p></article>
+        <article class="skill reveal"><div class="num">05 — CREATIVE</div><h3>Video Editing</h3><p>Editing workflow, visual storytelling and client-focused delivery.</p></article>
+        <article class="skill reveal"><div class="num">06 — LANGUAGES</div><h3>Hindi & English</h3><p>Communication in Hindi and English.</p></article>
+      </div>
+    </div></section>
+
+    <section id="experience"><div class="wrap">
+      <div class="section-head reveal"><div><div class="eyebrow">03 / Experience & education</div><h2>Where I've been.</h2></div></div>
+      <div class="panel timeline reveal">
+        <div class="item"><div class="date">2021 — 2024</div><div><h3>BSc, Statistics</h3><p>Academic foundation in statistics and quantitative methods · CGPA 6.86</p></div></div>
+        <div class="item"><div class="date">3 years</div><div><h3>Teaching Experience</h3><p>Teaching experience in an educational institution, developing communication and explanation skills.</p></div></div>
+        <div class="item"><div class="date">2 years</div><div><h3>Freelance Video Editing</h3><p>Video editing work for clients, with a focus on delivering content to a brief.</p></div></div>
+        <div class="item"><div class="date">6 months</div><div><h3>Computer Applications Course</h3><p>Completed a six-month course in computer applications.</p></div></div>
+      </div>
+    </div></section>
+
+    <section id="projects"><div class="wrap">
+      <div class="section-head reveal"><div><div class="eyebrow">04 / Selected work</div><h2>Projects in progress.</h2></div><p class="section-note">Only add projects here once they exist in your GitHub profile. Link each card to its real repository.</p></div>
+      <div class="projects">
+        <article class="project reveal"><div><div class="eyebrow">PYTHON / BEGINNER</div><h3>Python Practice Collection</h3><p>Small programs covering input, conditions, loops, functions and problem-solving exercises.</p></div><a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noreferrer">View GitHub profile ↗</a></article>
+        <article class="project reveal"><div><div class="eyebrow">STATISTICS / DATA</div><h3>Statistics & Data Projects</h3><p>Planned work using real datasets, descriptive statistics and clear visual explanations.</p></div><a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noreferrer">View GitHub profile ↗</a></article>
+      </div>
+    </div></section>
+
+    <section id="contact"><div class="wrap">
+      <div class="contact reveal"><div><div class="eyebrow">05 / Contact</div><h2>Let's connect and build something useful.</h2><p>For opportunities, collaboration or a conversation about data and technology.</p></div><div class="actions"><a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Email me ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div>
+    </div></section>
+  </main>
+  <footer class="wrap"><span>© <span id="year"></span> Shivam Malik</span><span>Designed with curiosity · Built for the web</span></footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+    }), {threshold: .12});
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
