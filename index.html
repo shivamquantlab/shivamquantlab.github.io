@@ -180,6 +180,56 @@
     .project-link svg { width: 14px; height: 14px; }
     .all-projects { display: flex; justify-content: center; margin-top: 28px; }
 
+
+    /* Quantitative Research Lab */
+    .lab-shell { padding: clamp(18px,3vw,30px); border: 1px solid var(--line-strong); border-radius: 25px; background: linear-gradient(145deg,rgba(18,27,42,.94),rgba(10,16,27,.96)); box-shadow: var(--shadow); }
+    .lab-topline { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:22px; }
+    .lab-live { display:inline-flex; align-items:center; gap:8px; padding:7px 10px; border:1px solid rgba(196,244,107,.2); border-radius:999px; color:var(--lime); background:rgba(196,244,107,.06); font: .61rem "IBM Plex Mono",monospace; letter-spacing:.06em; }
+    .lab-live::before { content:""; width:6px; height:6px; border-radius:50%; background:var(--lime); box-shadow:0 0 12px rgba(196,244,107,.7); }
+    .lab-note { color:var(--subtle); font:.62rem "IBM Plex Mono",monospace; text-align:right; }
+    .lab-tabs { display:flex; flex-wrap:wrap; gap:8px; padding:6px; border:1px solid var(--line); border-radius:15px; background:rgba(4,8,15,.42); margin-bottom:24px; }
+    .lab-tab { display:inline-flex; align-items:center; gap:9px; min-height:42px; padding:0 14px; border:1px solid transparent; border-radius:10px; color:var(--muted); background:transparent; font-size:.76rem; font-weight:700; cursor:pointer; transition: .25s var(--ease); }
+    .lab-tab:hover { color:var(--text); background:rgba(255,255,255,.035); }
+    .lab-tab[aria-selected="true"] { color:var(--lime); border-color:rgba(196,244,107,.2); background:rgba(196,244,107,.075); }
+    .lab-tab span { color:var(--subtle); font: .6rem "IBM Plex Mono",monospace; }
+    .lab-experiment { display:none; animation:lab-enter .38s var(--ease); }
+    .lab-experiment.active { display:block; }
+    @keyframes lab-enter { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:none; } }
+    .lab-experiment-heading { display:flex; justify-content:space-between; align-items:flex-start; gap:20px; margin:5px 0 22px; }
+    .lab-experiment-heading h3 { margin:0 0 6px; font:600 clamp(1.25rem,2.4vw,1.75rem)/1.15 "Space Grotesk",sans-serif; letter-spacing:-.05em; }
+    .lab-experiment-heading p { max-width:620px; margin:0; color:var(--muted); font-size:.81rem; line-height:1.75; }
+    .lab-equation { flex:0 0 auto; padding:9px 12px; border:1px solid var(--line); border-radius:11px; color:#dce7f4; background:rgba(255,255,255,.025); font:.72rem "IBM Plex Mono",monospace; white-space:nowrap; }
+    .lab-workspace { display:grid; grid-template-columns: minmax(220px,.72fr) minmax(0,1.55fr); gap:14px; align-items:stretch; }
+    .lab-controls { display:flex; flex-direction:column; gap:15px; padding:20px; border:1px solid var(--line); border-radius:17px; background:rgba(5,10,18,.38); }
+    .lab-control { display:grid; gap:8px; }
+    .lab-control label, .lab-control .lab-label-row { display:flex; align-items:center; justify-content:space-between; gap:10px; color:#dbe4f0; font-size:.74rem; font-weight:600; }
+    .lab-control output { color:var(--lime); font:.68rem "IBM Plex Mono",monospace; }
+    .lab-control input[type="range"] { width:100%; accent-color:var(--lime); cursor:pointer; }
+    .lab-control select { width:100%; min-height:42px; padding:0 11px; border:1px solid var(--line-strong); border-radius:10px; color:var(--text); background:#111a29; font: .78rem "DM Sans",sans-serif; }
+    .lab-help { margin:0; color:var(--subtle); font-size:.67rem; line-height:1.65; }
+    .lab-run { display:inline-flex; justify-content:center; align-items:center; gap:9px; width:100%; min-height:43px; margin-top:auto; border:1px solid rgba(196,244,107,.3); border-radius:11px; color:#101707; background:linear-gradient(120deg,var(--lime),#a9e995); font-size:.77rem; font-weight:800; cursor:pointer; transition:transform .25s var(--ease),box-shadow .25s; }
+    .lab-run:hover { transform:translateY(-2px); box-shadow:0 10px 24px rgba(196,244,107,.15); }
+    .lab-run:disabled { opacity:.65; cursor:wait; transform:none; }
+    .lab-visual { min-width:0; padding:16px; border:1px solid var(--line); border-radius:17px; background:rgba(5,10,18,.38); }
+    .lab-visual-top { display:flex; justify-content:space-between; align-items:center; gap:12px; margin-bottom:12px; }
+    .lab-visual-top strong { color:#dce5f2; font:500 .66rem "IBM Plex Mono",monospace; letter-spacing:.06em; }
+    .lab-visual-top span { color:var(--subtle); font:.59rem "IBM Plex Mono",monospace; }
+    .lab-canvas-wrap { position:relative; width:100%; min-height:250px; border:1px solid rgba(177,196,224,.09); border-radius:12px; overflow:hidden; background:linear-gradient(180deg,rgba(112,225,214,.035),rgba(8,12,20,.08)); }
+    .lab-canvas { display:block; width:100%; height:300px; }
+    .lab-stats { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:9px; margin-top:11px; }
+    .lab-stat { min-width:0; padding:12px 11px; border:1px solid var(--line); border-radius:11px; background:rgba(255,255,255,.018); }
+    .lab-stat strong { display:block; overflow:hidden; color:#f0f4fa; font:600 clamp(.91rem,1.7vw,1.2rem) "Space Grotesk",sans-serif; letter-spacing:-.045em; text-overflow:ellipsis; white-space:nowrap; }
+    .lab-stat span { display:block; margin-top:4px; color:var(--subtle); font:.55rem "IBM Plex Mono",monospace; text-transform:uppercase; letter-spacing:.045em; }
+    .lab-legend { display:flex; flex-wrap:wrap; gap:15px; margin-top:12px; color:var(--muted); font:.65rem "IBM Plex Mono",monospace; }
+    .lab-legend span { display:inline-flex; align-items:center; gap:7px; }
+    .lab-legend i { width:8px; height:8px; border-radius:2px; background:var(--cyan); }
+    .lab-legend .legend-line { width:15px; height:2px; border-radius:2px; background:var(--lime); }
+    .lab-foot { display:flex; align-items:flex-start; gap:10px; margin-top:16px; padding:12px 14px; border:1px solid rgba(138,167,255,.14); border-radius:12px; color:var(--muted); background:rgba(138,167,255,.035); font-size:.7rem; line-height:1.7; }
+    .lab-foot strong { color:#dce5f2; }
+    .lab-foot b { color:var(--blue); font:600 .62rem "IBM Plex Mono",monospace; white-space:nowrap; }
+    .lab-inline { color:var(--lime); font-family:"IBM Plex Mono",monospace; }
+    .lab-hidden { display:none !important; }
+
     /* Learning */
     .learning-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: 18px; }
     .learning-note { padding: 30px; }
@@ -241,6 +291,9 @@
       .orbit { width: 410px; height: 410px; }
       .skill-grid { grid-template-columns: repeat(2,1fr); }
       .learning-layout { grid-template-columns: 1fr; }
+      .lab-workspace { grid-template-columns:1fr; }
+      .lab-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:end; }
+      .lab-run { grid-column:1 / -1; }
     }
     @media (max-width: 760px) {
       .wrap { width: min(var(--max), calc(100% - 36px)); }
@@ -286,6 +339,17 @@
       .skill-grid { grid-template-columns: 1fr; }
       .skill-card { min-height: auto; }
       .project-card { min-height: 270px; padding: 22px; }
+      .lab-shell { padding:14px; border-radius:19px; }
+      .lab-topline { align-items:flex-start; flex-direction:column; }
+      .lab-note { text-align:left; }
+      .lab-tabs { display:grid; grid-template-columns:1fr; }
+      .lab-tab { justify-content:flex-start; }
+      .lab-experiment-heading { flex-direction:column; }
+      .lab-equation { white-space:normal; }
+      .lab-controls { grid-template-columns:1fr; padding:15px; }
+      .lab-run { grid-column:auto; }
+      .lab-canvas { height:245px; }
+      .lab-stats { grid-template-columns:repeat(2,minmax(0,1fr)); }
       .certificate { padding: 14px; gap: 8px; }
       .certificate h3 { font-size: .82rem; }
       .certificate p { font-size: .66rem; }
@@ -314,6 +378,7 @@
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#research-lab">Research Lab</a>
         <a href="#learning">Learning</a>
         <a href="#journey">Journey</a>
       </nav>
@@ -341,7 +406,7 @@
         <div class="visual-glow"></div>
         <div class="orbit"></div>
         <div class="float-note one">μ = 0.00&nbsp; / &nbsp;σ = 1.00</div>
-        <div class="float-note two">SIMULATION · RUNNING</div>
+        <div class="float-note two">VISUAL · CONCEPT</div>
         <div class="visual-card">
           <div class="visual-card-top"><span>QUANTITATIVE LAB / 001</span><span class="window-dots"><i></i><i></i><i></i></span></div>
           <div class="visual-kicker">A VISUAL STUDY OF DATA</div>
@@ -462,10 +527,109 @@
       </div>
     </section>
 
+
+    <section id="research-lab">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">04 / INTERACTIVE QUANTITATIVE LAB</div><h2 class="section-title">Experiment. Observe. Understand.</h2></div>
+          <p class="section-intro">Small, reproducible browser experiments that connect probability theory with numerical evidence. Adjust the parameters and run the simulations yourself.</p>
+        </div>
+        <div class="lab-shell reveal">
+          <div class="lab-topline"><span class="lab-live">LOCAL SIMULATION · READY</span><span class="lab-note">NO DATA UPLOAD · RUNS IN YOUR BROWSER</span></div>
+          <div class="lab-tabs" role="tablist" aria-label="Quantitative experiments">
+            <button class="lab-tab" id="labTabClt" type="button" role="tab" aria-selected="true" aria-controls="labClt"><span>01</span> Central Limit Theorem</button>
+            <button class="lab-tab" id="labTabPi" type="button" role="tab" aria-selected="false" aria-controls="labPi"><span>02</span> Monte Carlo π</button>
+            <button class="lab-tab" id="labTabDist" type="button" role="tab" aria-selected="false" aria-controls="labDist"><span>03</span> Distribution Explorer</button>
+          </div>
+
+          <div class="lab-experiment active" id="labClt" role="tabpanel" aria-labelledby="labTabClt">
+            <div class="lab-experiment-heading">
+              <div><h3>Watch sample means become more predictable.</h3><p>Draw repeated random samples from a selected population, calculate each sample mean, and compare the resulting histogram with the normal approximation predicted by the Central Limit Theorem.</p></div>
+              <div class="lab-equation">SE = σ / √n</div>
+            </div>
+            <div class="lab-workspace">
+              <div class="lab-controls">
+                <div class="lab-control"><label for="cltPopulation">Population model</label><select id="cltPopulation"><option value="uniform">Uniform (−√3, +√3)</option><option value="exponential">Exponential (λ = 1)</option><option value="bernoulli">Bernoulli (p = 0.30)</option></select><p class="lab-help">Each population is parameterized to have a known mean and standard deviation.</p></div>
+                <div class="lab-control"><div class="lab-label-row"><label for="cltN">Sample size (n)</label><output id="cltNOut" for="cltN"> n = 20</output></div><input id="cltN" type="range" min="2" max="100" step="1" value="20"><p class="lab-help">Number of observations in each sample.</p></div>
+                <div class="lab-control"><div class="lab-label-row"><label for="cltReps">Repeated samples</label><output id="cltRepsOut" for="cltReps">1,500</output></div><input id="cltReps" type="range" min="200" max="4000" step="100" value="1500"><p class="lab-help">More repetitions make the histogram smoother.</p></div>
+                <button class="lab-run" id="runClt" type="button">Run sampling experiment ↗</button>
+              </div>
+              <div class="lab-visual">
+                <div class="lab-visual-top"><strong>EMPIRICAL SAMPLING DISTRIBUTION</strong><span id="cltChartCaption">1,500 sample means · n = 20</span></div>
+                <div class="lab-canvas-wrap"><canvas class="lab-canvas" id="cltCanvas" aria-label="Histogram of sample means with a normal approximation overlay"></canvas></div>
+                <div class="lab-legend"><span><i></i> Empirical histogram</span><span><i class="legend-line"></i> Normal approximation</span></div>
+                <div class="lab-stats">
+                  <div class="lab-stat"><strong id="cltMean">—</strong><span>Empirical mean</span></div>
+                  <div class="lab-stat"><strong id="cltSd">—</strong><span>Empirical SD</span></div>
+                  <div class="lab-stat"><strong id="cltSe">—</strong><span>Theoretical SE</span></div>
+                  <div class="lab-stat"><strong id="cltNStat">—</strong><span>Sample size</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="lab-foot"><b>INTERPRETATION</b><span>The CLT describes the distribution of <strong>sample means</strong>, not the raw population. As <span class="lab-inline">n</span> increases, the normal approximation often improves while the standard error decreases. The rate and conditions depend on the population.</span></div>
+          </div>
+
+          <div class="lab-experiment" id="labPi" role="tabpanel" aria-labelledby="labTabPi" hidden>
+            <div class="lab-experiment-heading">
+              <div><h3>Estimate π using random points.</h3><p>Sample points uniformly from a unit square and count how many fall inside the quarter circle. The area ratio gives an estimate of π. More points generally reduce sampling noise.</p></div>
+              <div class="lab-equation">π ≈ 4 × (inside / total)</div>
+            </div>
+            <div class="lab-workspace">
+              <div class="lab-controls">
+                <div class="lab-control"><div class="lab-label-row"><label for="piPoints">Random points</label><output id="piPointsOut" for="piPoints">5,000</output></div><input id="piPoints" type="range" min="500" max="20000" step="500" value="5000"><p class="lab-help">The simulation counts every point; the plot displays a representative subset for smooth rendering.</p></div>
+                <div class="lab-control"><label>Geometry</label><p class="lab-help">A quarter circle of radius 1 is inscribed in a unit square. Its area is π/4, while the square's area is 1.</p></div>
+                <button class="lab-run" id="runPi" type="button">Generate random points ↗</button>
+              </div>
+              <div class="lab-visual">
+                <div class="lab-visual-top"><strong>MONTE CARLO POINT CLOUD</strong><span id="piChartCaption">5,000 trials</span></div>
+                <div class="lab-canvas-wrap"><canvas class="lab-canvas" id="piCanvas" aria-label="Random points inside and outside a quarter circle"></canvas></div>
+                <div class="lab-legend"><span><i></i> Inside quarter circle</span><span><i style="background:#8aa7ff"></i> Outside quarter circle</span></div>
+                <div class="lab-stats">
+                  <div class="lab-stat"><strong id="piEstimate">—</strong><span>Estimated π</span></div>
+                  <div class="lab-stat"><strong id="piError">—</strong><span>Absolute error</span></div>
+                  <div class="lab-stat"><strong id="piInside">—</strong><span>Points inside</span></div>
+                  <div class="lab-stat"><strong id="piTrials">—</strong><span>Total trials</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="lab-foot"><b>INTERPRETATION</b><span>This is a stochastic estimator, not an exact calculation. A single run can over- or under-estimate π. Compare runs at different sample sizes; the error does not have to decrease monotonically every time.</span></div>
+          </div>
+
+          <div class="lab-experiment" id="labDist" role="tabpanel" aria-labelledby="labTabDist" hidden>
+            <div class="lab-experiment-heading">
+              <div><h3>Explore probability models.</h3><p>Change distribution parameters and inspect the resulting probability density or probability mass. Continuous Normal uses a density curve; Binomial and Poisson use discrete probability bars.</p></div>
+              <div class="lab-equation">PDF / PMF</div>
+            </div>
+            <div class="lab-workspace">
+              <div class="lab-controls">
+                <div class="lab-control"><label for="distType">Distribution</label><select id="distType"><option value="normal">Normal (continuous)</option><option value="binomial">Binomial (discrete)</option><option value="poisson">Poisson (discrete)</option></select></div>
+                <div class="lab-control"><div class="lab-label-row"><label id="distALabel" for="distA">Mean (μ)</label><output id="distAOut" for="distA">0.0</output></div><input id="distA" type="range" min="-3" max="3" step="0.1" value="0"></div>
+                <div class="lab-control" id="distBControl"><div class="lab-label-row"><label id="distBLabel" for="distB">Standard deviation (σ)</label><output id="distBOut" for="distB">1.0</output></div><input id="distB" type="range" min="0.3" max="2.5" step="0.1" value="1"></div>
+                <p class="lab-help" id="distHelp">The Normal distribution is symmetric around μ; σ controls its spread.</p>
+                <button class="lab-run" id="runDist" type="button">Update distribution ↗</button>
+              </div>
+              <div class="lab-visual">
+                <div class="lab-visual-top"><strong id="distChartTitle">NORMAL PROBABILITY DENSITY</strong><span id="distChartCaption">μ = 0.0 · σ = 1.0</span></div>
+                <div class="lab-canvas-wrap"><canvas class="lab-canvas" id="distCanvas" aria-label="Probability distribution chart"></canvas></div>
+                <div class="lab-legend"><span><i></i> Probability model</span></div>
+                <div class="lab-stats">
+                  <div class="lab-stat"><strong id="distMean">0.00</strong><span>Theoretical mean</span></div>
+                  <div class="lab-stat"><strong id="distVariance">1.00</strong><span>Theoretical variance</span></div>
+                  <div class="lab-stat"><strong id="distKind">PDF</strong><span>Model type</span></div>
+                  <div class="lab-stat"><strong id="distSupport">ℝ</strong><span>Support</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="lab-foot"><b>INTERPRETATION</b><span>A probability density value is not the probability at a single point. For a continuous variable, probabilities are areas over intervals. For discrete models, each bar represents the probability of that exact count.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="learning">
       <div class="wrap">
         <div class="section-heading reveal">
-          <div><div class="eyebrow">04 / CONTINUOUS LEARNING</div><h2 class="section-title">Learning with intent.</h2></div>
+          <div><div class="eyebrow">05 / CONTINUOUS LEARNING</div><h2 class="section-title">Learning with intent.</h2></div>
           <p class="section-intro">Courses are a foundation. The next step is applying each concept in documented, working projects.</p>
         </div>
         <div class="learning-layout">
@@ -500,7 +664,7 @@
     <section id="journey">
       <div class="wrap">
         <div class="section-heading reveal">
-          <div><div class="eyebrow">05 / BACKGROUND</div><h2 class="section-title">The journey so far.</h2></div>
+          <div><div class="eyebrow">06 / BACKGROUND</div><h2 class="section-title">The journey so far.</h2></div>
           <p class="section-intro">A mix of quantitative education, teaching, creative work and independent technical learning.</p>
         </div>
         <div class="glass-panel" style="padding:30px clamp(22px,4vw,42px)">
@@ -518,7 +682,7 @@
     <section id="contact">
       <div class="wrap">
         <div class="contact-panel reveal">
-          <div><div class="eyebrow">06 / GET IN TOUCH</div><h2>Let's make something meaningful with data.</h2><p>Open to learning opportunities, technical collaboration and conversations around Python, statistics and quantitative problem-solving.</p></div>
+          <div><div class="eyebrow">07 / GET IN TOUCH</div><h2>Let's make something meaningful with data.</h2><p>Open to learning opportunities, technical collaboration and conversations around Python, statistics and quantitative problem-solving.</p></div>
           <div class="contact-actions">
             <a class="btn btn-primary" href="mailto:shivammfreestyler@gmail.com">Email me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
             <a class="contact-link" href="https://github.com/shivamquantlab" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.21.43-2.2 1.15-2.98-.12-.28-.5-1.41.11-2.94 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.66.11 2.94.72.78 1.15 1.77 1.15 2.98 0 4.27-2.6 5.22-5.08 5.49.4.35.76 1.02.76 2.06v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>github.com/shivamquantlab ↗</a>
@@ -593,6 +757,233 @@
         }, { rootMargin: '-35% 0px -55% 0px' });
         sections.forEach(section => sectionObserver.observe(section));
       }
+
+
+      // Quantitative Research Lab — all simulations run locally in this browser.
+      const labTabs = [...document.querySelectorAll('.lab-tab')];
+      const labPanels = [...document.querySelectorAll('.lab-experiment')];
+      labTabs.forEach(tab => tab.addEventListener('click', () => {
+        labTabs.forEach(item => item.setAttribute('aria-selected', String(item === tab)));
+        labPanels.forEach(panel => {
+          const selected = panel.id === tab.getAttribute('aria-controls');
+          panel.classList.toggle('active', selected);
+          panel.hidden = !selected;
+        });
+        // Canvas dimensions are measured after the selected panel becomes visible.
+        requestAnimationFrame(() => {
+          if (tab.id === 'labTabClt') runCLT();
+          if (tab.id === 'labTabPi' && !piHasRun) runPi();
+          if (tab.id === 'labTabDist') runDistribution();
+        });
+      }));
+
+      const labNumber = value => Number(value).toLocaleString('en-US');
+      const labFmt = (value, digits = 3) => Number(value).toFixed(digits);
+      const labCanvas = (canvas, logicalHeight = 300) => {
+        if (!canvas) return null;
+        const rect = canvas.getBoundingClientRect();
+        const width = Math.max(280, Math.floor(rect.width));
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width = Math.floor(width * dpr);
+        canvas.height = Math.floor(logicalHeight * dpr);
+        const ctx = canvas.getContext('2d');
+        ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+        return { ctx, width, height: logicalHeight };
+      };
+      const labText = (ctx, text, x, y, color = '#718097', align = 'left') => {
+        ctx.fillStyle = color; ctx.font = '10px "IBM Plex Mono", monospace'; ctx.textAlign = align; ctx.fillText(text, x, y);
+      };
+      const labAxes = (ctx, width, height, yMax, xLabels = []) => {
+        const left = 48, right = width - 15, top = 18, bottom = height - 34;
+        ctx.strokeStyle = 'rgba(177,196,224,.12)'; ctx.lineWidth = 1;
+        ctx.fillStyle = '#718097'; ctx.font = '10px "IBM Plex Mono", monospace'; ctx.textAlign = 'right';
+        for (let i = 0; i <= 4; i++) {
+          const y = bottom - (bottom - top) * i / 4;
+          ctx.beginPath(); ctx.moveTo(left, y); ctx.lineTo(right, y); ctx.stroke();
+          ctx.fillText((yMax * i / 4).toFixed(yMax < 2 ? 2 : 1), left - 9, y + 3);
+        }
+        if (xLabels.length) {
+          ctx.textAlign = 'center';
+          xLabels.forEach(item => ctx.fillText(item.label, left + (right - left) * item.position, bottom + 19));
+        }
+        return { left, right, top, bottom, plotW: right - left, plotH: bottom - top };
+      };
+
+      // CLT experiment
+      const cltPopulation = document.getElementById('cltPopulation');
+      const cltN = document.getElementById('cltN');
+      const cltReps = document.getElementById('cltReps');
+      let cltHasRun = false;
+      function populationSpec(type) {
+        if (type === 'exponential') return { mean: 1, sd: 1, sample: () => -Math.log(Math.max(1e-12, 1 - Math.random())) };
+        if (type === 'bernoulli') return { mean: .3, sd: Math.sqrt(.3 * .7), sample: () => Math.random() < .3 ? 1 : 0 };
+        return { mean: 0, sd: 1, sample: () => (Math.random() * 2 - 1) * Math.sqrt(3) };
+      }
+      function normalPdf(x, mean, sd) { return Math.exp(-.5 * ((x - mean) / sd) ** 2) / (sd * Math.sqrt(2 * Math.PI)); }
+      function runCLT() {
+        const n = Number(cltN.value), reps = Number(cltReps.value), spec = populationSpec(cltPopulation.value);
+        document.getElementById('cltNOut').textContent = `n = ${n}`;
+        document.getElementById('cltRepsOut').textContent = labNumber(reps);
+        const means = new Array(reps); let total = 0;
+        for (let r = 0; r < reps; r++) {
+          let sum = 0; for (let j = 0; j < n; j++) sum += spec.sample();
+          means[r] = sum / n; total += means[r];
+        }
+        const empiricalMean = total / reps;
+        const empiricalVariance = means.reduce((acc, v) => acc + (v - empiricalMean) ** 2, 0) / reps;
+        const empiricalSd = Math.sqrt(empiricalVariance), theoreticalSe = spec.sd / Math.sqrt(n);
+        const range = 4.2 * theoreticalSe, min = spec.mean - range, max = spec.mean + range;
+        const bins = 34, counts = new Array(bins).fill(0), binWidth = (max - min) / bins;
+        means.forEach(v => { if (v >= min && v <= max) counts[Math.min(bins - 1, Math.floor((v - min) / binWidth))]++; });
+        const maxDensity = Math.max(...counts) / (reps * binWidth);
+        const yMax = Math.max(maxDensity * 1.18, normalPdf(spec.mean, spec.mean, theoreticalSe) * 1.12);
+        const canvas = labCanvas(document.getElementById('cltCanvas')); if (!canvas) return;
+        const {ctx,width,height} = canvas;
+        const xLabels = [{label:min.toFixed(2),position:0},{label:spec.mean.toFixed(2),position:.5},{label:max.toFixed(2),position:1}];
+        const a = labAxes(ctx,width,height,yMax,xLabels);
+        ctx.fillStyle = 'rgba(112,225,214,.68)';
+        counts.forEach((count,i) => {
+          const density = count / (reps * binWidth), barH = density / yMax * a.plotH;
+          const x = a.left + i / bins * a.plotW, w = a.plotW / bins - 1.2;
+          ctx.fillRect(x, a.bottom - barH, Math.max(1,w), barH);
+        });
+        ctx.beginPath();
+        for (let i = 0; i <= 180; i++) {
+          const xVal = min + (max - min) * i / 180, px = a.left + i / 180 * a.plotW;
+          const py = a.bottom - normalPdf(xVal,spec.mean,theoreticalSe) / yMax * a.plotH;
+          if (i === 0) ctx.moveTo(px,py); else ctx.lineTo(px,py);
+        }
+        ctx.strokeStyle = '#c4f46b'; ctx.lineWidth = 2.2; ctx.stroke();
+        document.getElementById('cltChartCaption').textContent = `${labNumber(reps)} sample means · n = ${n}`;
+        document.getElementById('cltMean').textContent = labFmt(empiricalMean,3);
+        document.getElementById('cltSd').textContent = labFmt(empiricalSd,3);
+        document.getElementById('cltSe').textContent = labFmt(theoreticalSe,3);
+        document.getElementById('cltNStat').textContent = labNumber(n);
+        cltHasRun = true;
+      }
+      document.getElementById('runClt').addEventListener('click',runCLT);
+      cltN.addEventListener('input',() => document.getElementById('cltNOut').textContent = `n = ${cltN.value}`);
+      cltReps.addEventListener('input',() => document.getElementById('cltRepsOut').textContent = labNumber(cltReps.value));
+      [cltN,cltReps,cltPopulation].forEach(el => el.addEventListener('change',runCLT));
+
+      // Monte Carlo estimate of pi
+      const piPoints = document.getElementById('piPoints');
+      let piHasRun = false;
+      function runPi() {
+        const total = Number(piPoints.value), points = new Array(total); let inside = 0;
+        for (let i = 0; i < total; i++) {
+          const x = Math.random(), y = Math.random(), hit = x*x + y*y <= 1;
+          if (hit) inside++;
+          points[i] = [x,y,hit];
+        }
+        const estimate = 4 * inside / total, error = Math.abs(Math.PI - estimate);
+        const canvas = labCanvas(document.getElementById('piCanvas')); if (!canvas) return;
+        const {ctx,width,height} = canvas;
+        const side = Math.min(width - 38,height - 34), x0 = (width-side)/2, y0 = (height-side)/2;
+        // quarter-circle boundary and unit-square frame
+        ctx.strokeStyle = 'rgba(177,196,224,.45)'; ctx.lineWidth = 1.2; ctx.strokeRect(x0,y0,side,side);
+        ctx.beginPath(); ctx.moveTo(x0,y0+side); ctx.arc(x0,y0+side,side, -Math.PI/2, 0); ctx.closePath();
+        ctx.strokeStyle = 'rgba(196,244,107,.9)'; ctx.lineWidth = 2; ctx.stroke();
+        ctx.beginPath(); ctx.moveTo(x0,y0+side); ctx.lineTo(x0+side,y0+side); ctx.lineTo(x0+side,y0); ctx.strokeStyle='rgba(177,196,224,.24)'; ctx.lineWidth=1; ctx.stroke();
+        // Draw every generated point, grouped by outcome to reduce canvas calls.
+        ctx.fillStyle = 'rgba(112,225,214,.72)'; ctx.beginPath();
+        points.forEach(([x,y,hit]) => { if (hit) { const px=x0+x*side, py=y0+side-y*side; ctx.moveTo(px+1.5,py); ctx.arc(px,py,1.5,0,Math.PI*2); } }); ctx.fill();
+        ctx.fillStyle = 'rgba(138,167,255,.72)'; ctx.beginPath();
+        points.forEach(([x,y,hit]) => { if (!hit) { const px=x0+x*side, py=y0+side-y*side; ctx.moveTo(px+1.5,py); ctx.arc(px,py,1.5,0,Math.PI*2); } }); ctx.fill();
+        document.getElementById('piPointsOut').textContent = labNumber(total);
+        document.getElementById('piChartCaption').textContent = `${labNumber(total)} random points`;
+        document.getElementById('piEstimate').textContent = labFmt(estimate,5);
+        document.getElementById('piError').textContent = labFmt(error,5);
+        document.getElementById('piInside').textContent = labNumber(inside);
+        document.getElementById('piTrials').textContent = labNumber(total);
+        piHasRun = true;
+      }
+      document.getElementById('runPi').addEventListener('click',runPi);
+      piPoints.addEventListener('input',() => document.getElementById('piPointsOut').textContent = labNumber(piPoints.value));
+      piPoints.addEventListener('change',runPi);
+
+      // Probability distribution explorer
+      const distType = document.getElementById('distType'), distA = document.getElementById('distA'), distB = document.getElementById('distB');
+      function updateDistributionControls() {
+        const type = distType.value, labelA = document.getElementById('distALabel'), labelB = document.getElementById('distBLabel'), help = document.getElementById('distHelp');
+        const bControl = document.getElementById('distBControl');
+        if (type === 'normal') {
+          labelA.textContent = 'Mean (μ)'; labelB.textContent = 'Standard deviation (σ)';
+          distA.min='-3'; distA.max='3'; distA.step='.1'; distA.value='0';
+          distB.min='.3'; distB.max='2.5'; distB.step='.1'; distB.value='1'; bControl.classList.remove('lab-hidden');
+          help.textContent='The Normal distribution is symmetric around μ; σ controls its spread.';
+        } else if (type === 'binomial') {
+          labelA.textContent = 'Trials (n)'; labelB.textContent = 'Success probability (p)';
+          distA.min='5'; distA.max='40'; distA.step='1'; distA.value='20';
+          distB.min='.05'; distB.max='.95'; distB.step='.05'; distB.value='.5'; bControl.classList.remove('lab-hidden');
+          help.textContent='Binomial models the number of successes in n independent trials with constant success probability p.';
+        } else {
+          labelA.textContent = 'Rate (λ)'; distA.min='.5'; distA.max='12'; distA.step='.5'; distA.value='4';
+          bControl.classList.add('lab-hidden'); help.textContent='Poisson models event counts in a fixed interval when events occur independently at average rate λ.';
+        }
+        syncDistributionLabels();
+      }
+      function syncDistributionLabels() {
+        document.getElementById('distAOut').textContent = Number(distA.value).toFixed(distType.value === 'binomial' ? 0 : 1);
+        document.getElementById('distBOut').textContent = Number(distB.value).toFixed(2).replace(/0$/,'').replace(/\.$/,'');
+      }
+      function factorialLog(n) { let sum=0; for(let i=2;i<=n;i++) sum+=Math.log(i); return sum; }
+      function chooseProbability(n,k,p) {
+        if (k<0 || k>n) return 0;
+        const logP = factorialLog(n)-factorialLog(k)-factorialLog(n-k) + (k===0?0:k*Math.log(p)) + (k===n?0:(n-k)*Math.log1p(-p));
+        return Math.exp(logP);
+      }
+      function poissonProbability(lambda,k) { return Math.exp(-lambda + k*Math.log(lambda) - factorialLog(k)); }
+      function runDistribution() {
+        const type=distType.value, a=Number(distA.value), b=Number(distB.value);
+        syncDistributionLabels();
+        let xs=[], ys=[], mean=0, variance=0, title='', caption='', kind='', support='';
+        if(type==='normal') {
+          mean=a; variance=b*b; title='NORMAL PROBABILITY DENSITY'; caption=`μ = ${a.toFixed(1)} · σ = ${b.toFixed(1)}`; kind='PDF'; support='ℝ';
+          const min=a-4*b,max=a+4*b,steps=100;
+          for(let i=0;i<=steps;i++){const x=min+(max-min)*i/steps;xs.push(x);ys.push(normalPdf(x,a,b));}
+        } else if(type==='binomial') {
+          const n=Math.round(a), prob=b; mean=n*prob; variance=n*prob*(1-prob); title='BINOMIAL PROBABILITY MASS'; caption=`n = ${n} · p = ${prob.toFixed(2)}`; kind='PMF'; support=`0 … ${n}`;
+          for(let k=0;k<=n;k++){xs.push(k);ys.push(chooseProbability(n,k,prob));}
+        } else {
+          const lambda=a; mean=lambda; variance=lambda; title='POISSON PROBABILITY MASS'; caption=`λ = ${lambda.toFixed(1)}`; kind='PMF'; support='0, 1, 2, …';
+          const maxK=Math.min(30,Math.max(12,Math.ceil(lambda+4*Math.sqrt(lambda)+3)));
+          for(let k=0;k<=maxK;k++){xs.push(k);ys.push(poissonProbability(lambda,k));}
+        }
+        const canvas=labCanvas(document.getElementById('distCanvas')); if(!canvas)return;
+        const {ctx,width,height}=canvas, yMax=Math.max(...ys)*1.18 || 1;
+        const labels=type==='normal'?[{label:xs[0].toFixed(1),position:0},{label:mean.toFixed(1),position:.5},{label:xs[xs.length-1].toFixed(1),position:1}]:[{label:String(xs[0]),position:0},{label:String(xs[Math.floor(xs.length/2)]),position:.5},{label:String(xs[xs.length-1]),position:1}];
+        const chart=labAxes(ctx,width,height,yMax,labels);
+        if(type==='normal') {
+          const points=xs.map((x,i)=>({x:chart.left+i/(xs.length-1)*chart.plotW,y:chart.bottom-ys[i]/yMax*chart.plotH}));
+          const gradient=ctx.createLinearGradient(0,chart.top,0,chart.bottom); gradient.addColorStop(0,'rgba(112,225,214,.23)'); gradient.addColorStop(1,'rgba(112,225,214,0)');
+          ctx.beginPath(); points.forEach((pt,i)=>i===0?ctx.moveTo(pt.x,pt.y):ctx.lineTo(pt.x,pt.y)); ctx.lineTo(chart.right,chart.bottom); ctx.lineTo(chart.left,chart.bottom); ctx.closePath(); ctx.fillStyle=gradient; ctx.fill();
+          ctx.beginPath(); points.forEach((pt,i)=>i===0?ctx.moveTo(pt.x,pt.y):ctx.lineTo(pt.x,pt.y)); ctx.strokeStyle='#70e1d6'; ctx.lineWidth=2.5; ctx.stroke();
+          const meanX=chart.left+(mean-xs[0])/(xs[xs.length-1]-xs[0])*chart.plotW; ctx.setLineDash([4,5]);ctx.beginPath();ctx.moveTo(meanX,chart.top);ctx.lineTo(meanX,chart.bottom);ctx.strokeStyle='rgba(196,244,107,.8)';ctx.stroke();ctx.setLineDash([]);
+        } else {
+          const band=chart.plotW/xs.length,barW=Math.max(2,band*.62);
+          ys.forEach((v,i)=>{const x=chart.left+i*band+(band-barW)/2,h=v/yMax*chart.plotH;ctx.fillStyle='rgba(112,225,214,.72)';ctx.fillRect(x,chart.bottom-h,barW,h);ctx.fillStyle='#c4f46b';ctx.beginPath();ctx.arc(x+barW/2,chart.bottom-h,2.2,0,Math.PI*2);ctx.fill();});
+        }
+        document.getElementById('distChartTitle').textContent=title; document.getElementById('distChartCaption').textContent=caption;
+        document.getElementById('distMean').textContent=labFmt(mean,3); document.getElementById('distVariance').textContent=labFmt(variance,3);
+        document.getElementById('distKind').textContent=kind; document.getElementById('distSupport').textContent=support;
+      }
+      distType.addEventListener('change',()=>{updateDistributionControls();runDistribution();});
+      [distA,distB].forEach(el=>el.addEventListener('input',syncDistributionLabels));
+      [distA,distB].forEach(el=>el.addEventListener('change',runDistribution));
+      document.getElementById('runDist').addEventListener('click',runDistribution);
+
+      // Draw once the lab is laid out; redraw charts when the browser changes size.
+      const redrawLab = () => {
+        if (document.getElementById('labClt').classList.contains('active')) runCLT();
+        if (document.getElementById('labPi').classList.contains('active')) runPi();
+        if (document.getElementById('labDist').classList.contains('active')) runDistribution();
+      };
+      updateDistributionControls();
+      requestAnimationFrame(() => { runCLT(); runDistribution(); });
+      let labResizeTimer;
+      window.addEventListener('resize', () => { clearTimeout(labResizeTimer); labResizeTimer=setTimeout(redrawLab,180); }, {passive:true});
+
     })();
   </script>
 </body>
