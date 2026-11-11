@@ -1,118 +1,599 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Shivam Malik — Statistics graduate, aspiring data professional and creative problem solver.">
-  <meta name="theme-color" content="#0b0d12">
-  <title>Shivam Malik — Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#080b12" />
+  <meta name="description" content="Shivam Malik — B.Sc. in Physics, Statistics & Mathematics. Building statistical simulations, Python projects and quantitative tools." />
+  <meta property="og:title" content="Shivam Malik — Python & Quantitative Projects" />
+  <meta property="og:description" content="A portfolio of statistical simulations, Python projects and continuous learning." />
+  <meta property="og:type" content="website" />
+  <title>Shivam Malik — Python, Statistics & Quantitative Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
-    :root{--bg:#0b0d12;--panel:#121620;--panel2:#171d29;--text:#f4f6fb;--muted:#9aa4b5;--line:rgba(255,255,255,.10);--lime:#c6f36b;--cyan:#7be7df;--max:1120px}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 80% 0%,rgba(123,231,223,.09),transparent 32%),radial-gradient(ellipse at 10% 20%,rgba(198,243,107,.07),transparent 28%),var(--bg);color:var(--text);font-family:Manrope,system-ui,sans-serif;line-height:1.65}
-    a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
-    .brand{font-weight:800;letter-spacing:-.06em;font-size:1.25rem}.brand span{color:var(--lime)}.navlinks{display:flex;gap:25px;color:var(--muted);font-size:.86rem}.navlinks a:hover,.textlink:hover{color:var(--lime)}
-    .eyebrow{font:500 .72rem 'DM Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--lime)}
-    .hero{padding:100px 0 88px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}
-    h1{font-size:clamp(3.1rem,8vw,6.7rem);line-height:.98;letter-spacing:-.085em;margin:18px 0 25px;max-width:800px}
-    h1 em{font-style:normal;color:var(--lime)}.intro{color:var(--muted);font-size:1.08rem;max-width:630px}
-    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:999px;font-weight:800;font-size:.86rem;border:1px solid var(--line);transition:.2s}
-    .btn.primary{background:var(--lime);color:#11170b;border-color:var(--lime)}.btn:hover{transform:translateY(-3px)}.btn.secondary:hover{border-color:var(--lime)}
-    .hero-card{background:linear-gradient(145deg,#1c2531,#10141d);border:1px solid var(--line);border-radius:26px;padding:25px;position:relative;overflow:hidden;min-height:310px}
-    .hero-card:after{content:"";position:absolute;width:190px;height:190px;border:1px solid rgba(198,243,107,.3);border-radius:50%;right:-45px;top:-50px;box-shadow:0 0 0 25px rgba(198,243,107,.035),0 0 0 55px rgba(198,243,107,.025)}
-    .monogram{width:74px;height:74px;border-radius:22px;background:var(--lime);color:#10150b;display:grid;place-items:center;font-size:1.65rem;font-weight:800;letter-spacing:-.08em}
-    .card-label{font: .7rem 'DM Mono',monospace;color:var(--muted);letter-spacing:.12em;margin-top:45px}.card-title{font-size:1.55rem;font-weight:800;line-height:1.2;margin-top:9px;max-width:260px}
-    .availability{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:.78rem;margin-top:20px}.dot{width:8px;height:8px;border-radius:50%;background:var(--lime);box-shadow:0 0 12px var(--lime)}
-    section{padding:78px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:32px}
-    h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.065em;line-height:1.05;margin:10px 0 0}.section-note{max-width:390px;color:var(--muted);font-size:.9rem}
-    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:25px}.panel p{color:var(--muted);margin:10px 0 0}.statrow{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.stat{background:var(--panel2);border-radius:16px;padding:18px}.stat strong{display:block;font-size:1.8rem;letter-spacing:-.06em}.stat span{font-size:.76rem;color:var(--muted)}
-    .tags{display:flex;gap:9px;flex-wrap:wrap;margin-top:17px}.tag{font: .72rem 'DM Mono',monospace;border:1px solid var(--line);padding:8px 11px;border-radius:99px;color:#d8dfeb}
-    .timeline{display:grid;gap:12px}.item{display:grid;grid-template-columns:180px 1fr;gap:24px;padding:23px 0;border-bottom:1px solid var(--line)}.item:last-child{border:0}.date{font: .72rem 'DM Mono',monospace;color:var(--lime);text-transform:uppercase;letter-spacing:.08em}.item h3{margin:0;font-size:1.05rem}.item p{margin:6px 0 0;color:var(--muted);font-size:.9rem}
-    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skill{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:20px}.skill .num{font: .7rem 'DM Mono',monospace;color:var(--lime)}.skill h3{margin:12px 0 5px}.skill p{color:var(--muted);font-size:.83rem;margin:0}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:15px}.project{background:linear-gradient(145deg,#171e2a,#10141c);border:1px solid var(--line);border-radius:20px;padding:24px;min-height:205px;display:flex;flex-direction:column;justify-content:space-between}.project h3{font-size:1.2rem;margin:12px 0 5px}.project p{color:var(--muted);font-size:.87rem;margin:0}.project a{color:var(--lime);font-size:.82rem;font-weight:800;margin-top:20px}
-    .contact{background:linear-gradient(120deg,rgba(198,243,107,.10),rgba(123,231,223,.06));border:1px solid var(--line);border-radius:26px;padding:clamp(25px,5vw,55px);display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{max-width:570px}.contact p{color:var(--muted)}
-    footer{padding:30px 0;color:var(--muted);font-size:.78rem;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
-    .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:760px){.nav{height:auto;padding:18px 0;align-items:flex-start}.navlinks{gap:12px;flex-wrap:wrap;justify-content:flex-end;font-size:.75rem;max-width:210px}.hero{grid-template-columns:1fr;padding:72px 0 60px;gap:35px}.hero-card{min-height:260px}.about-grid,.skills,.projects{grid-template-columns:1fr}.section-head{display:block}.section-note{margin-top:15px}.item{grid-template-columns:1fr;gap:7px}.contact{display:block}.contact .btn{margin-top:12px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}}
+    :root {
+      color-scheme: dark;
+      --bg: #080b12;
+      --bg-soft: #0d121d;
+      --panel: rgba(17, 24, 38, .78);
+      --panel-solid: #111826;
+      --panel-raised: #151f30;
+      --text: #f2f5fa;
+      --muted: #9aa7ba;
+      --subtle: #6e7c91;
+      --line: rgba(177, 196, 224, .13);
+      --line-strong: rgba(177, 196, 224, .23);
+      --lime: #c4f46b;
+      --cyan: #70e1d6;
+      --blue: #8aa7ff;
+      --max: 1160px;
+      --ease: cubic-bezier(.2,.75,.25,1);
+      --shadow: 0 24px 80px rgba(0,0,0,.32);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body {
+      margin: 0;
+      min-width: 320px;
+      color: var(--text);
+      background:
+        radial-gradient(ellipse 55% 32% at 75% -8%, rgba(95, 124, 255, .15), transparent 70%),
+        radial-gradient(ellipse 45% 30% at 0% 28%, rgba(112, 225, 214, .075), transparent 75%),
+        var(--bg);
+      font: 400 16px/1.7 "DM Sans", system-ui, sans-serif;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: ""; position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .16;
+      background-image: linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 62px 62px; mask-image: linear-gradient(to bottom, black, transparent 86%);
+    }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    button:focus-visible, a:focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
+    ::selection { background: rgba(196,244,107,.28); color: white; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .mono, .eyebrow, .nav-index, .project-meta, .mini-label { font-family: "IBM Plex Mono", monospace; }
+    .eyebrow { color: var(--lime); font-size: .72rem; letter-spacing: .15em; text-transform: uppercase; font-weight: 500; }
+    .muted { color: var(--muted); }
+    .top-progress { position: fixed; z-index: 1000; inset: 0 auto auto 0; height: 2px; width: 0; background: linear-gradient(90deg, var(--lime), var(--cyan), var(--blue)); box-shadow: 0 0 16px rgba(112,225,214,.45); }
+
+    /* Navigation */
+    .site-header { position: sticky; top: 0; z-index: 100; border-bottom: 1px solid transparent; transition: background .35s, border-color .35s; }
+    .site-header.scrolled { background: rgba(8,11,18,.78); border-color: var(--line); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); }
+    .nav { height: 78px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font: 700 1.04rem "Space Grotesk", sans-serif; letter-spacing: -.045em; white-space: nowrap; }
+    .brand-mark { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 11px; color: #0b1105; background: linear-gradient(140deg, var(--lime), #8ce6c3); font-size: .82rem; box-shadow: 0 7px 26px rgba(196,244,107,.13); }
+    .brand-name span { color: var(--lime); }
+    .nav-links { display: flex; align-items: center; gap: clamp(17px, 2.3vw, 30px); color: var(--muted); font-size: .83rem; }
+    .nav-links a { position: relative; padding: 9px 0; transition: color .25s; }
+    .nav-links a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: 2px; height: 1px; background: var(--lime); transition: right .3s var(--ease); }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-links a:hover::after, .nav-links a.active::after { right: 0; }
+    .nav-cta { padding: 10px 16px; border: 1px solid var(--line-strong); border-radius: 999px; font-size: .8rem; font-weight: 700; transition: .3s var(--ease); }
+    .nav-cta:hover { border-color: var(--lime); color: var(--lime); transform: translateY(-2px); }
+    .menu-toggle { display: none; width: 42px; height: 42px; border: 1px solid var(--line); color: var(--text); background: var(--panel); border-radius: 13px; cursor: pointer; }
+    .menu-toggle svg { width: 19px; height: 19px; }
+
+    /* Hero */
+    .hero { position: relative; min-height: 670px; display: grid; grid-template-columns: minmax(0,1.1fr) minmax(350px,.9fr); align-items: center; gap: clamp(34px, 6vw, 84px); padding-block: 88px 108px; }
+    .hero::before { content: ""; position: absolute; width: 420px; height: 420px; top: 70px; left: -220px; border-radius: 50%; background: rgba(112,225,214,.07); filter: blur(90px); pointer-events: none; }
+    .hero-copy { position: relative; z-index: 1; }
+    .status-pill { display: inline-flex; align-items: center; gap: 10px; padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px; color: #c6d2e3; background: rgba(17,24,38,.58); font: 500 .7rem "IBM Plex Mono", monospace; letter-spacing: .035em; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 0 0 rgba(196,244,107,.55); animation: pulse 2.2s infinite; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 { max-width: 760px; margin: 24px 0 23px; font: 600 clamp(3.35rem, 7.3vw, 6.65rem)/.99 "Space Grotesk", sans-serif; letter-spacing: -.085em; }
+    h1 .line-muted { color: #8492a8; }
+    h1 .gradient-text { color: transparent; background: linear-gradient(100deg, var(--lime) 5%, var(--cyan) 55%, #a4b5ff 100%); background-clip: text; -webkit-background-clip: text; }
+    .hero-lede { max-width: 620px; margin-bottom: 30px; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.12rem); line-height: 1.85; }
+    .hero-lede strong { color: #e8edf5; font-weight: 600; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 48px; padding: 0 19px; border: 1px solid var(--line-strong); border-radius: 13px; font-size: .84rem; font-weight: 700; transition: transform .3s var(--ease), border-color .3s, background .3s, box-shadow .3s; }
+    .btn svg { width: 16px; height: 16px; transition: transform .3s var(--ease); }
+    .btn:hover { transform: translateY(-3px); }
+    .btn:hover svg { transform: translate(2px,-2px); }
+    .btn-primary { color: #101707; background: linear-gradient(120deg, var(--lime), #a9e995); border-color: transparent; box-shadow: 0 12px 30px rgba(196,244,107,.12); }
+    .btn-primary:hover { box-shadow: 0 16px 38px rgba(196,244,107,.22); }
+    .btn-ghost { color: #e8edf5; background: rgba(17,24,38,.52); }
+    .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+    .hero-footnote { display: flex; align-items: center; gap: 13px; margin-top: 43px; color: var(--subtle); font: .68rem "IBM Plex Mono", monospace; letter-spacing: .035em; }
+    .hero-footnote::before { content: ""; width: 34px; height: 1px; background: var(--line-strong); }
+
+    /* Animated visual card */
+    .hero-visual { position: relative; min-height: 470px; display: grid; place-items: center; isolation: isolate; }
+    .visual-glow { position: absolute; width: 85%; aspect-ratio: 1; border-radius: 50%; background: conic-gradient(from 30deg, rgba(196,244,107,.14), rgba(112,225,214,.05), rgba(138,167,255,.16), rgba(196,244,107,.14)); filter: blur(55px); animation: slow-rotate 22s linear infinite; }
+    .visual-card { position: relative; z-index: 2; width: min(100%, 430px); padding: 23px; border: 1px solid rgba(177,196,224,.2); border-radius: 25px; background: linear-gradient(145deg, rgba(25,36,54,.94), rgba(11,17,28,.94)); box-shadow: var(--shadow), inset 0 1px rgba(255,255,255,.05); transform: perspective(900px) rotateY(-5deg) rotateX(2deg); transition: transform .6s var(--ease), border-color .4s; }
+    .visual-card:hover { transform: perspective(900px) rotateY(0) rotateX(0) translateY(-5px); border-color: rgba(196,244,107,.35); }
+    .visual-card-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+    .visual-card-top span:first-child { color: #dce5f2; font: 500 .72rem "IBM Plex Mono", monospace; letter-spacing: .08em; }
+    .window-dots { display: flex; gap: 5px; }
+    .window-dots i { display: block; width: 6px; height: 6px; border-radius: 50%; background: #53627a; }
+    .window-dots i:first-child { background: var(--lime); }
+    .visual-kicker { margin: 22px 0 4px; color: var(--subtle); font: .64rem "IBM Plex Mono", monospace; letter-spacing: .14em; }
+    .visual-title { margin: 0; font: 600 1.42rem "Space Grotesk", sans-serif; letter-spacing: -.045em; }
+    .chart { position: relative; height: 172px; margin: 22px 0 17px; overflow: hidden; border-radius: 14px; background: linear-gradient(180deg, rgba(112,225,214,.035), rgba(112,225,214,0)); }
+    .chart-grid { position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0, transparent 41px, rgba(177,196,224,.11) 42px), repeating-linear-gradient(to right, transparent 0, transparent 54px, rgba(177,196,224,.055) 55px); }
+    .chart svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .chart-line { stroke-dasharray: 700; stroke-dashoffset: 700; animation: draw-line 2.3s .5s var(--ease) forwards; }
+    .chart-area { opacity: 0; animation: fade-in 1.2s 1.9s forwards; }
+    .visual-metrics { display: grid; grid-template-columns: repeat(3,1fr); gap: 9px; }
+    .visual-metric { padding: 12px 10px; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.018); }
+    .visual-metric strong { display: block; color: #f2f6fc; font: 600 1.13rem "Space Grotesk", sans-serif; letter-spacing: -.04em; }
+    .visual-metric span { display: block; margin-top: 3px; color: var(--subtle); font: .58rem "IBM Plex Mono", monospace; text-transform: uppercase; letter-spacing: .07em; }
+    .orbit { position: absolute; z-index: 1; width: 490px; height: 490px; border: 1px solid rgba(138,167,255,.16); border-radius: 50%; animation: slow-rotate 34s linear infinite; }
+    .orbit::before, .orbit::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; background: var(--cyan); box-shadow: 0 0 22px rgba(112,225,214,.8); }
+    .orbit::before { top: 72px; left: 58px; }
+    .orbit::after { bottom: 65px; right: 53px; width: 7px; height: 7px; background: var(--lime); box-shadow: 0 0 20px rgba(196,244,107,.8); }
+    .float-note { position: absolute; z-index: 3; padding: 10px 13px; border: 1px solid var(--line-strong); border-radius: 12px; color: #dce5f2; background: rgba(13,19,30,.86); box-shadow: 0 10px 30px rgba(0,0,0,.22); font: .65rem "IBM Plex Mono", monospace; backdrop-filter: blur(12px); animation: float 6s ease-in-out infinite; }
+    .float-note.one { top: 36px; right: 0; }
+    .float-note.two { left: -4px; bottom: 52px; animation-delay: -2.6s; }
+
+    /* Sections */
+    section { position: relative; padding: 105px 0; border-top: 1px solid var(--line); }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 42px; }
+    .section-title { margin: 12px 0 0; font: 600 clamp(2.2rem, 4.6vw, 3.8rem)/1.04 "Space Grotesk", sans-serif; letter-spacing: -.075em; }
+    .section-intro { max-width: 390px; margin: 0 0 3px; color: var(--muted); font-size: .9rem; }
+    .about-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 18px; }
+    .glass-panel { border: 1px solid var(--line); border-radius: 21px; background: linear-gradient(145deg, rgba(20,29,44,.88), rgba(13,19,30,.82)); box-shadow: inset 0 1px rgba(255,255,255,.025); }
+    .about-copy { padding: clamp(25px,4vw,38px); }
+    .about-copy p { margin: 15px 0 0; color: var(--muted); line-height: 1.9; }
+    .about-copy p strong { color: var(--text); font-weight: 600; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 25px; }
+    .tag { display: inline-flex; align-items: center; padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; color: #c5d0df; background: rgba(255,255,255,.018); font: .65rem "IBM Plex Mono", monospace; }
+    .stats-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+    .stat-card { display: flex; flex-direction: column; justify-content: space-between; min-height: 140px; padding: 22px; border: 1px solid var(--line); border-radius: 19px; background: rgba(17,24,38,.72); transition: transform .35s var(--ease), border-color .35s, background .35s; }
+    .stat-card:hover { transform: translateY(-5px); border-color: rgba(196,244,107,.32); background: rgba(21,31,48,.9); }
+    .stat-card strong { font: 600 clamp(2rem,3.5vw,2.8rem)/1 "Space Grotesk", sans-serif; letter-spacing: -.07em; }
+    .stat-card span { color: var(--muted); font-size: .77rem; }
+    .stat-card .stat-accent { color: var(--lime); font: .64rem "IBM Plex Mono", monospace; }
+
+    /* Skills */
+    .skill-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+    .skill-card { min-height: 220px; padding: 24px; transition: transform .4s var(--ease), border-color .4s, box-shadow .4s; }
+    .skill-card:hover { transform: translateY(-6px); border-color: rgba(112,225,214,.32); box-shadow: 0 18px 40px rgba(0,0,0,.18); }
+    .skill-icon { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid rgba(196,244,107,.19); border-radius: 13px; color: var(--lime); background: rgba(196,244,107,.07); }
+    .skill-icon svg { width: 20px; height: 20px; }
+    .skill-card h3 { margin: 21px 0 8px; font: 600 1.15rem "Space Grotesk", sans-serif; letter-spacing: -.035em; }
+    .skill-card p { margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.8; }
+    .skill-footer { margin-top: 17px; color: var(--subtle); font: .61rem "IBM Plex Mono", monospace; letter-spacing: .04em; }
+
+    /* Projects */
+    .projects-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .project-card { position: relative; display: flex; flex-direction: column; min-height: 285px; padding: 26px; border: 1px solid var(--line); border-radius: 21px; overflow: hidden; background: linear-gradient(145deg, rgba(21,31,48,.9), rgba(12,18,29,.92)); transition: transform .4s var(--ease), border-color .35s, box-shadow .4s; }
+    .project-card::before { content: ""; position: absolute; width: 200px; height: 200px; top: -125px; right: -95px; border-radius: 50%; background: var(--project-glow, rgba(196,244,107,.15)); filter: blur(60px); opacity: .6; transition: opacity .4s, transform .6s; }
+    .project-card:hover { transform: translateY(-6px); border-color: rgba(196,244,107,.35); box-shadow: 0 24px 55px rgba(0,0,0,.24); }
+    .project-card:hover::before { opacity: 1; transform: scale(1.5); }
+    .project-top { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .project-number { color: var(--subtle); font: .68rem "IBM Plex Mono", monospace; }
+    .project-type { padding: 6px 9px; border: 1px solid var(--line); border-radius: 999px; color: #b8c6d8; font: .6rem "IBM Plex Mono", monospace; letter-spacing: .04em; }
+    .project-symbol { display: grid; place-items: center; width: 48px; height: 48px; margin-top: 30px; border: 1px solid rgba(112,225,214,.2); border-radius: 15px; color: var(--cyan); background: rgba(112,225,214,.07); }
+    .project-symbol svg { width: 22px; height: 22px; }
+    .project-card h3 { position: relative; z-index: 1; margin: 18px 0 8px; font: 600 1.32rem "Space Grotesk", sans-serif; letter-spacing: -.045em; }
+    .project-card p { position: relative; z-index: 1; max-width: 470px; margin: 0; color: var(--muted); font-size: .84rem; line-height: 1.8; }
+    .project-bottom { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: auto; padding-top: 24px; }
+    .project-stack { color: var(--subtle); font: .61rem "IBM Plex Mono", monospace; }
+    .project-link { display: inline-flex; align-items: center; gap: 7px; color: var(--lime); font-size: .76rem; font-weight: 700; transition: gap .25s; }
+    .project-link:hover { gap: 12px; }
+    .project-link svg { width: 14px; height: 14px; }
+    .all-projects { display: flex; justify-content: center; margin-top: 28px; }
+
+    /* Learning */
+    .learning-layout { display: grid; grid-template-columns: .82fr 1.18fr; gap: 18px; }
+    .learning-note { padding: 30px; }
+    .learning-note h3 { margin: 16px 0 12px; font: 600 1.55rem/1.18 "Space Grotesk", sans-serif; letter-spacing: -.05em; }
+    .learning-note p { margin: 0; color: var(--muted); font-size: .86rem; line-height: 1.85; }
+    .learning-stack { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 23px; }
+    .certificate-list { display: grid; gap: 10px; }
+    .certificate { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 18px 20px; border: 1px solid var(--line); border-radius: 16px; background: rgba(17,24,38,.65); transition: transform .3s var(--ease), border-color .3s; }
+    .certificate:hover { transform: translateX(5px); border-color: rgba(196,244,107,.3); }
+    .certificate-main { display: flex; align-items: center; gap: 14px; min-width: 0; }
+    .certificate-icon { flex: 0 0 38px; display: grid; place-items: center; width: 38px; height: 38px; border: 1px solid rgba(196,244,107,.19); border-radius: 12px; color: var(--lime); background: rgba(196,244,107,.07); }
+    .certificate-icon svg { width: 18px; height: 18px; }
+    .certificate h3 { margin: 0; font: 600 .92rem "Space Grotesk", sans-serif; }
+    .certificate p { margin: 4px 0 0; color: var(--muted); font-size: .72rem; }
+    .certificate-status { flex: 0 0 auto; color: var(--lime); font: .59rem "IBM Plex Mono", monospace; text-align: right; }
+    .certificate-status span { display: block; margin-top: 4px; color: var(--subtle); }
+
+    /* Journey */
+    .journey { padding: 10px 0 0; }
+    .journey-item { position: relative; display: grid; grid-template-columns: 180px 1fr; gap: 28px; padding: 0 0 30px; }
+    .journey-item:not(:last-child)::before { content: ""; position: absolute; top: 9px; left: 5px; bottom: -2px; width: 1px; background: linear-gradient(var(--line-strong), transparent); }
+    .journey-date { position: relative; padding-left: 25px; color: var(--lime); font: .68rem "IBM Plex Mono", monospace; letter-spacing: .04em; }
+    .journey-date::before { content: ""; position: absolute; top: 6px; left: 0; width: 10px; height: 10px; border: 2px solid var(--lime); border-radius: 50%; background: var(--bg); box-shadow: 0 0 16px rgba(196,244,107,.24); }
+    .journey-content h3 { margin: 0 0 5px; font: 600 1.05rem "Space Grotesk", sans-serif; }
+    .journey-content p { max-width: 720px; margin: 0; color: var(--muted); font-size: .84rem; }
+
+    /* Contact */
+    .contact-panel { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; align-items: center; padding: clamp(28px,5vw,58px); border: 1px solid rgba(196,244,107,.19); border-radius: 26px; overflow: hidden; background: radial-gradient(ellipse at 100% 0%, rgba(112,225,214,.12), transparent 54%), linear-gradient(135deg, rgba(25,37,55,.92), rgba(13,19,30,.95)); box-shadow: var(--shadow); }
+    .contact-panel::after { content: ""; position: absolute; right: -125px; bottom: -230px; width: 390px; height: 390px; border: 1px solid rgba(196,244,107,.12); border-radius: 50%; box-shadow: 0 0 0 38px rgba(196,244,107,.018), 0 0 0 80px rgba(112,225,214,.015); pointer-events: none; }
+    .contact-panel h2 { max-width: 540px; margin: 13px 0 12px; font: 600 clamp(2.2rem,4.7vw,3.65rem)/1.05 "Space Grotesk", sans-serif; letter-spacing: -.075em; }
+    .contact-panel p { max-width: 490px; margin: 0; color: var(--muted); font-size: .9rem; }
+    .contact-actions { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+    .contact-link { display: inline-flex; align-items: center; gap: 12px; color: #e7edf6; font-size: .88rem; transition: color .25s; }
+    .contact-link:hover { color: var(--lime); }
+    .contact-link svg { width: 17px; height: 17px; color: var(--lime); }
+    footer { display: flex; justify-content: space-between; gap: 18px; align-items: center; padding: 28px 0 36px; color: var(--subtle); font: .66rem "IBM Plex Mono", monospace; }
+    .footer-links { display: flex; gap: 18px; }
+    .footer-links a:hover { color: var(--lime); }
+    .back-top { position: fixed; z-index: 30; right: 22px; bottom: 22px; display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid var(--line-strong); border-radius: 14px; color: var(--text); background: rgba(17,24,38,.84); backdrop-filter: blur(12px); opacity: 0; visibility: hidden; transform: translateY(10px); transition: .3s var(--ease); cursor: pointer; }
+    .back-top.show { opacity: 1; visibility: visible; transform: none; }
+    .back-top:hover { color: var(--lime); border-color: var(--lime); }
+    .back-top svg { width: 18px; height: 18px; }
+
+    /* Motion */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
+    .reveal.in-view { opacity: 1; transform: none; }
+    .reveal.delay-1 { transition-delay: .08s; }
+    .reveal.delay-2 { transition-delay: .16s; }
+    .reveal.delay-3 { transition-delay: .24s; }
+    @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(196,244,107,.5); } 70% { box-shadow: 0 0 0 8px rgba(196,244,107,0); } 100% { box-shadow: 0 0 0 0 rgba(196,244,107,0); } }
+    @keyframes float { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
+    @keyframes slow-rotate { to { transform: rotate(360deg); } }
+    @keyframes draw-line { to { stroke-dashoffset: 0; } }
+    @keyframes fade-in { to { opacity: 1; } }
+
+    /* Responsive */
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr  minmax(300px,.8fr); gap: 28px; }
+      .orbit { width: 410px; height: 410px; }
+      .skill-grid { grid-template-columns: repeat(2,1fr); }
+      .learning-layout { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 760px) {
+      .wrap { width: min(var(--max), calc(100% - 36px)); }
+      .nav { height: 70px; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 70px; left: 0; right: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 18px 16px; border-bottom: 1px solid var(--line); background: rgba(8,11,18,.96); backdrop-filter: blur(18px); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: .25s var(--ease); }
+      .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+      .nav-links a { padding: 12px 4px; border-bottom: 1px solid rgba(177,196,224,.08); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .nav-links a::after { display: none; }
+      .hero { min-height: auto; grid-template-columns: 1fr; padding-block: 76px 80px; }
+      h1 { max-width: 660px; font-size: clamp(3.4rem, 12vw, 5.5rem); }
+      .hero-visual { min-height: 440px; margin-top: 8px; }
+      .visual-card { width: min(100%, 460px); transform: none; }
+      .orbit { width: min(95vw, 430px); height: min(95vw, 430px); }
+      section { padding: 78px 0; }
+      .section-heading { display: block; margin-bottom: 30px; }
+      .section-intro { margin-top: 15px; }
+      .about-grid, .contact-panel { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .contact-actions { margin-top: 5px; }
+    }
+    @media (max-width: 520px) {
+      .wrap { width: calc(100% - 30px); }
+      .hero { padding-top: 60px; }
+      h1 { font-size: clamp(3.05rem, 15vw, 4.4rem); }
+      .hero-actions { align-items: stretch; flex-direction: column; }
+      .hero-actions .btn { width: 100%; }
+      .hero-footnote { margin-top: 30px; font-size: .6rem; }
+      .hero-visual { min-height: 380px; }
+      .visual-card { padding: 17px; border-radius: 20px; }
+      .chart { height: 142px; }
+      .visual-metric { padding: 9px 7px; }
+      .visual-metric strong { font-size: 1rem; }
+      .visual-metric span { font-size: .52rem; }
+      .float-note { font-size: .57rem; }
+      .float-note.one { top: 10px; right: -3px; }
+      .float-note.two { bottom: 15px; left: -4px; }
+      .orbit { width: 95vw; height: 95vw; }
+      .stats-grid { gap: 9px; }
+      .stat-card { min-height: 120px; padding: 16px; }
+      .skill-grid { grid-template-columns: 1fr; }
+      .skill-card { min-height: auto; }
+      .project-card { min-height: 270px; padding: 22px; }
+      .certificate { padding: 14px; gap: 8px; }
+      .certificate h3 { font-size: .82rem; }
+      .certificate p { font-size: .66rem; }
+      .certificate-status { font-size: .52rem; }
+      .journey-item { grid-template-columns: 1fr; gap: 9px; padding-bottom: 26px; }
+      .contact-panel { padding: 25px 21px; }
+      .contact-panel h2 { font-size: 2.5rem; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+      .reveal { opacity: 1; transform: none; }
+      .chart-line { stroke-dashoffset: 0; }
+      .chart-area { opacity: 1; }
+    }
   </style>
 </head>
 <body>
-  <header class="wrap nav">
-    <a class="brand" href="#home">SHIVAM<span>.</span></a>
-    <nav class="navlinks" aria-label="Main navigation">
-      <a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#contact">Contact</a>
-    </nav>
+  <div class="top-progress" id="topProgress" aria-hidden="true"></div>
+  <header class="site-header" id="siteHeader">
+    <div class="wrap nav">
+      <a class="brand" href="#home" aria-label="Shivam Malik home">
+        <span class="brand-mark">SM</span><span class="brand-name">SHIVAM<span>.</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#learning">Learning</a>
+        <a href="#journey">Journey</a>
+      </nav>
+      <a class="nav-cta" href="#contact">Let's connect ↗</a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </header>
+
   <main>
-    <div class="wrap hero" id="home">
-      <div class="reveal">
-        <div class="eyebrow">Portfolio / 2026 — 2027</div>
-        <h1>Curious mind.<br><em>Analytical</em> approach.</h1>
-        <p class="intro">I'm Shivam Malik, a Statistics graduate building practical skills in programming and data-focused problem solving. I bring together analytical thinking, communication and a creative mindset.</p>
-        <div class="actions">
-          <a class="btn primary" href="#projects">Explore my work ↗</a>
-          <a class="btn secondary" href="resume.pdf" download>Download CV ↓</a>
+    <section class="hero wrap" id="home" style="border:0;">
+      <div class="hero-copy">
+        <div class="status-pill reveal"><span class="status-dot"></span> PORTFOLIO · PYTHON & QUANTITATIVE WORK</div>
+        <h1 class="reveal delay-1">Curious by nature.<br><span class="line-muted">Driven by</span><br><span class="gradient-text">the numbers.</span></h1>
+        <p class="hero-lede reveal delay-2">I'm <strong>Shivam Malik</strong> — a B.Sc. graduate in Physics, Statistics & Mathematics, building practical Python projects at the intersection of statistical thinking, mathematical modelling and technology.</p>
+        <div class="hero-actions reveal delay-3">
+          <a class="btn btn-primary" href="#projects">Explore my projects <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a>
+          <a class="btn btn-ghost" href="https://github.com/shivamquantlab" target="_blank" rel="noopener noreferrer">Visit GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3h7v7M10 14 21 3M19 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h6"/></svg></a>
+        </div>
+        <div class="hero-footnote reveal delay-3">STATISTICS · PYTHON · APPLIED MATHEMATICS</div>
+      </div>
+
+      <div class="hero-visual reveal delay-2" aria-label="Animated quantitative data visualization">
+        <div class="visual-glow"></div>
+        <div class="orbit"></div>
+        <div class="float-note one">μ = 0.00&nbsp; / &nbsp;σ = 1.00</div>
+        <div class="float-note two">SIMULATION · RUNNING</div>
+        <div class="visual-card">
+          <div class="visual-card-top"><span>QUANTITATIVE LAB / 001</span><span class="window-dots"><i></i><i></i><i></i></span></div>
+          <div class="visual-kicker">A VISUAL STUDY OF DATA</div>
+          <h2 class="visual-title">Patterns in randomness.</h2>
+          <div class="chart" aria-hidden="true">
+            <div class="chart-grid"></div>
+            <svg viewBox="0 0 390 172" preserveAspectRatio="none">
+              <defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#70e1d6" stop-opacity=".3"/><stop offset="1" stop-color="#70e1d6" stop-opacity="0"/></linearGradient><linearGradient id="chartStroke" x1="0" x2="1"><stop offset="0" stop-color="#c4f46b"/><stop offset=".55" stop-color="#70e1d6"/><stop offset="1" stop-color="#8aa7ff"/></linearGradient></defs>
+              <path class="chart-area" d="M0 143 C20 139 26 129 44 132 S72 145 88 122 S112 94 130 111 S154 134 174 101 S205 71 222 88 S250 119 270 77 S299 53 315 66 S347 83 361 43 S382 34 390 22 L390 172 L0 172Z" fill="url(#chartFill)"/>
+              <path class="chart-line" d="M0 143 C20 139 26 129 44 132 S72 145 88 122 S112 94 130 111 S154 134 174 101 S205 71 222 88 S250 119 270 77 S299 53 315 66 S347 83 361 43 S382 34 390 22" fill="none" stroke="url(#chartStroke)" stroke-width="2.7" stroke-linecap="round"/>
+              <circle cx="361" cy="43" r="4" fill="#c4f46b"><animate attributeName="r" values="3;6;3" dur="2.4s" repeatCount="indefinite"/></circle>
+            </svg>
+          </div>
+          <div class="visual-metrics">
+            <div class="visual-metric"><strong>06</strong><span>Public repos</span></div>
+            <div class="visual-metric"><strong>03</strong><span>Certificates</span></div>
+            <div class="visual-metric"><strong>2024</strong><span>Graduate</span></div>
+          </div>
         </div>
       </div>
-      <aside class="hero-card reveal">
-        <div class="monogram">SM</div>
-        <div class="card-label">CURRENT FOCUS</div>
-        <div class="card-title">Statistics · Python · Data & Technology</div>
-        <div class="availability"><span class="dot"></span> Open to learning and opportunities</div>
-      </aside>
-    </div>
+    </section>
 
-    <section id="about"><div class="wrap">
-      <div class="section-head reveal"><div><div class="eyebrow">01 / About</div><h2>A little about me.</h2></div><p class="section-note">A foundation in statistics, experience working with people, and a growing interest in technology.</p></div>
-      <div class="about-grid">
-        <div class="panel reveal"><div class="eyebrow">PROFILE</div><p>I completed a BSc in Statistics and am developing my programming and technical skills through consistent practice and projects. I enjoy learning by building, explaining ideas clearly and solving problems step by step.</p><div class="tags"><span class="tag">Statistics graduate</span><span class="tag">Problem solving</span><span class="tag">Continuous learner</span></div></div>
-        <div class="statrow reveal"><div class="stat"><strong>6.86</strong><span>BSc CGPA</span></div><div class="stat"><strong>3 yrs</strong><span>Teaching experience</span></div><div class="stat"><strong>2 yrs</strong><span>Video editing experience</span></div><div class="stat"><strong>2024</strong><span>Graduation year</span></div></div>
+    <section id="about">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">01 / THE PERSON BEHIND THE PROJECTS</div><h2 class="section-title">A little about me.</h2></div>
+          <p class="section-intro">A quantitative academic foundation, a practical learning mindset, and a growing body of Python work.</p>
+        </div>
+        <div class="about-grid">
+          <article class="glass-panel about-copy reveal">
+            <div class="eyebrow">PROFILE</div>
+            <p>I hold a <strong>B.Sc. in Physics, Statistics & Mathematics</strong>. My academic background taught me to approach problems through models, evidence and logical reasoning.</p>
+            <p>I'm now turning that foundation into practical work with <strong>Python, statistical simulations and quantitative algorithms</strong>. I prefer understanding how something works and implementing the core idea rather than treating code as a black box.</p>
+            <div class="tag-list"><span class="tag">Analytical thinking</span><span class="tag">Learning by building</span><span class="tag">Problem solving</span><span class="tag">Research mindset</span></div>
+          </article>
+          <div class="stats-grid reveal delay-1">
+            <div class="stat-card"><span class="stat-accent">01 / EDUCATION</span><strong>6.86</strong><span>B.Sc. CGPA</span></div>
+            <div class="stat-card"><span class="stat-accent">02 / PROJECTS</span><strong>06</strong><span>Public GitHub repositories</span></div>
+            <div class="stat-card"><span class="stat-accent">03 / LEARNING</span><strong>03</strong><span>Completed Stepik certificates</span></div>
+            <div class="stat-card"><span class="stat-accent">04 / GRADUATION</span><strong>2024</strong><span>Bachelor's degree</span></div>
+          </div>
+        </div>
       </div>
-    </div></section>
+    </section>
 
-    <section id="skills"><div class="wrap">
-      <div class="section-head reveal"><div><div class="eyebrow">02 / Skills</div><h2>Tools & strengths.</h2></div><p class="section-note">A developing skill set. This section should be updated as you complete projects and gain practical experience.</p></div>
-      <div class="skills">
-        <article class="skill reveal"><div class="num">01 — ANALYTICAL</div><h3>Statistics</h3><p>Statistical foundations, quantitative thinking and structured problem solving.</p></article>
-        <article class="skill reveal"><div class="num">02 — PROGRAMMING</div><h3>Python</h3><p>Beginner-level learning: core syntax, conditions, loops and small practice programs.</p></article>
-        <article class="skill reveal"><div class="num">03 — PRODUCTIVITY</div><h3>MS Excel</h3><p>Spreadsheet work, data organization and everyday productivity tasks.</p></article>
-        <article class="skill reveal"><div class="num">04 — COMMUNICATION</div><h3>Teaching</h3><p>Explaining concepts, communicating clearly and supporting learners.</p></article>
-        <article class="skill reveal"><div class="num">05 — CREATIVE</div><h3>Video Editing</h3><p>Editing workflow, visual storytelling and client-focused delivery.</p></article>
-        <article class="skill reveal"><div class="num">06 — LANGUAGES</div><h3>Hindi & English</h3><p>Communication in Hindi and English.</p></article>
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">02 / WHAT I WORK WITH</div><h2 class="section-title">Tools & foundations.</h2></div>
+          <p class="section-intro">A developing technical toolkit, grounded in mathematics and strengthened through hands-on projects.</p>
+        </div>
+        <div class="skill-grid">
+          <article class="glass-panel skill-card reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5m0 14h17M7 15l4-5 3 2 6-7"/><path d="M16 5h4v4"/></svg></div>
+            <h3>Statistics & Probability</h3><p>Statistical reasoning, probability distributions, sampling concepts and simulation-based exploration.</p><div class="skill-footer">MATHEMATICAL FOUNDATION</div>
+          </article>
+          <article class="glass-panel skill-card reveal delay-1">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m8 8-4 4 4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></div>
+            <h3>Python Development</h3><p>Python programming, notebook-based experimentation and implementing mathematical ideas in code.</p><div class="skill-footer">PYTHON · JUPYTER · GOOGLE COLAB</div>
+          </article>
+          <article class="glass-panel skill-card reveal delay-2">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3.5 7.5 12 12l8.5-4.5L12 3Z"/><path d="m3.5 12 8.5 4.5 8.5-4.5M3.5 16.5 12 21l8.5-4.5"/></svg></div>
+            <h3>Quantitative Computing</h3><p>Central limit theorem experiments, Monte Carlo methods and probability distribution implementations.</p><div class="skill-footer">SIMULATION · MODELLING · ALGORITHMS</div>
+          </article>
+          <article class="glass-panel skill-card reveal">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5m0 14h16M7 15l3-4 3 2 5-7"/><circle cx="18" cy="6" r="1.5"/></svg></div>
+            <h3>Data Analysis</h3><p>Working with structured datasets, statistical indicators and clear, evidence-led interpretation.</p><div class="skill-footer">DATA · ANALYSIS · VISUAL THINKING</div>
+          </article>
+          <article class="glass-panel skill-card reveal delay-1">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 5 3 12l5 7M16 5l5 7-5 7M14 3l-4 18"/></svg></div>
+            <h3>Version Control</h3><p>Maintaining public repositories, documenting projects and building a consistent development workflow.</p><div class="skill-footer">GIT · GITHUB</div>
+          </article>
+          <article class="glass-panel skill-card reveal delay-2">
+            <div class="skill-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9h10M7 13h6M7 17h3"/></svg></div>
+            <h3>Communication & Creativity</h3><p>Three years of teaching experience and two years of video editing experience.</p><div class="skill-footer">TEACHING · EXPLANATION · VIDEO EDITING</div>
+          </article>
+        </div>
       </div>
-    </div></section>
+    </section>
 
-    <section id="experience"><div class="wrap">
-      <div class="section-head reveal"><div><div class="eyebrow">03 / Experience & education</div><h2>Where I've been.</h2></div></div>
-      <div class="panel timeline reveal">
-        <div class="item"><div class="date">2021 — 2024</div><div><h3>BSc, Statistics</h3><p>Academic foundation in statistics and quantitative methods · CGPA 6.86</p></div></div>
-        <div class="item"><div class="date">3 years</div><div><h3>Teaching Experience</h3><p>Teaching experience in an educational institution, developing communication and explanation skills.</p></div></div>
-        <div class="item"><div class="date">2 years</div><div><h3>Freelance Video Editing</h3><p>Video editing work for clients, with a focus on delivering content to a brief.</p></div></div>
-        <div class="item"><div class="date">6 months</div><div><h3>Computer Applications Course</h3><p>Completed a six-month course in computer applications.</p></div></div>
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">03 / SELECTED WORK</div><h2 class="section-title">Built, tested, published.</h2></div>
+          <p class="section-intro">A selection from my six public repositories. Each project is part of my journey toward stronger statistical computing and Python development.</p>
+        </div>
+        <div class="projects-grid">
+          <article class="project-card reveal" style="--project-glow:rgba(196,244,107,.2)">
+            <div class="project-top"><span class="project-number">PROJECT / 001</span><span class="project-type">STATISTICS · PYTHON</span></div>
+            <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
+            <h3>Central Limit Theorem Simulator</h3>
+            <p>A notebook-based exploration of the Central Limit Theorem and the behaviour of sampling distributions.</p>
+            <div class="project-bottom"><span class="project-stack">JUPYTER NOTEBOOK</span><a class="project-link" href="https://github.com/shivamquantlab/central-limit-theorem-simulator" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+          </article>
+          <article class="project-card reveal delay-1" style="--project-glow:rgba(112,225,214,.2)">
+            <div class="project-top"><span class="project-number">PROJECT / 002</span><span class="project-type">SIMULATION · PYTHON</span></div>
+            <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3m0 12v3M3 12h3m12 0h3M5.6 5.6l2.1 2.1m8.6 8.6 2.1 2.1m0-12.8-2.1 2.1m-8.6 8.6-2.1 2.1"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></svg></div>
+            <h3>Monte Carlo Simulation Engine</h3>
+            <p>A simulation-focused project using repeated random sampling to explore numerical and probabilistic problems.</p>
+            <div class="project-bottom"><span class="project-stack">JUPYTER NOTEBOOK</span><a class="project-link" href="https://github.com/shivamquantlab/monte-carlo-simulation-engine" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+          </article>
+          <article class="project-card reveal" style="--project-glow:rgba(138,167,255,.2)">
+            <div class="project-top"><span class="project-number">PROJECT / 003</span><span class="project-type">PROBABILITY · PYTHON</span></div>
+            <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 17c1-1 2-5 4-5s2 4 4 4 3-8 6-9"/><path d="M5 17c2-5 4-10 7-10 4 0 5 5 7 10" opacity=".55"/></svg></div>
+            <h3>Probability Distributions Engine</h3>
+            <p>From-scratch theoretical PDF/PMF implementations for Normal, Binomial and Poisson probability models.</p>
+            <div class="project-bottom"><span class="project-stack">JUPYTER NOTEBOOK</span><a class="project-link" href="https://github.com/shivamquantlab/probability-distributions-engine" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+          </article>
+          <article class="project-card reveal delay-1" style="--project-glow:rgba(196,244,107,.13)">
+            <div class="project-top"><span class="project-number">PROJECT / 004</span><span class="project-type">DATA ANALYSIS · PYTHON</span></div>
+            <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5m0 14h17"/><rect x="7" y="11" width="3" height="5" rx=".5"/><rect x="12" y="8" width="3" height="8" rx=".5"/><rect x="17" y="5" width="3" height="11" rx=".5"/></svg></div>
+            <h3>Student Performance Analysis</h3>
+            <p>A first Python statistical data-analysis project examining multi-subject indicators and score distributions.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/student-performance-analysis" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+          </article>
+        </div>
+        <div class="all-projects reveal"><a class="btn btn-ghost" href="https://github.com/shivamquantlab?tab=repositories" target="_blank" rel="noopener noreferrer">Browse all 6 repositories <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
       </div>
-    </div></section>
+    </section>
 
-    <section id="projects"><div class="wrap">
-      <div class="section-head reveal"><div><div class="eyebrow">04 / Selected work</div><h2>Projects in progress.</h2></div><p class="section-note">Only add projects here once they exist in your GitHub profile. Link each card to its real repository.</p></div>
-      <div class="projects">
-        <article class="project reveal"><div><div class="eyebrow">PYTHON / BEGINNER</div><h3>Python Practice Collection</h3><p>Small programs covering input, conditions, loops, functions and problem-solving exercises.</p></div><a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noreferrer">View GitHub profile ↗</a></article>
-        <article class="project reveal"><div><div class="eyebrow">STATISTICS / DATA</div><h3>Statistics & Data Projects</h3><p>Planned work using real datasets, descriptive statistics and clear visual explanations.</p></div><a href="https://github.com/YOUR-GITHUB-USERNAME" target="_blank" rel="noreferrer">View GitHub profile ↗</a></article>
+    <section id="learning">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">04 / CONTINUOUS LEARNING</div><h2 class="section-title">Learning with intent.</h2></div>
+          <p class="section-intro">Courses are a foundation. The next step is applying each concept in documented, working projects.</p>
+        </div>
+        <div class="learning-layout">
+          <article class="glass-panel learning-note reveal">
+            <div class="eyebrow">CURRENT DIRECTION</div>
+            <h3>From mathematical foundations to applied machine learning.</h3>
+            <p>I'm building on Python and statistics while exploring data science, machine learning and stronger software development practices.</p>
+            <div class="learning-stack"><span class="tag">Python</span><span class="tag">Statistics</span><span class="tag">Data Science</span><span class="tag">Machine Learning</span><span class="tag">Quantitative Research</span></div>
+          </article>
+          <div class="certificate-list reveal delay-1">
+            <a class="certificate" href="https://stepik.org/users/1427768870/certificates" target="_blank" rel="noopener noreferrer">
+              <div class="certificate-main"><span class="certificate-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 3h8l5 5v13H7a3 3 0 0 1-3-3V6a3 3 0 0 1 3-3Z"/><path d="M15 3v6h5M8 14h8M8 17h6"/></svg></span><div><h3>Python Generation — Advanced</h3><p>Stepik · 100% completed · With distinction</p></div></div>
+              <div class="certificate-status">COMPLETED<span>STEPik ↗</span></div>
+            </a>
+            <a class="certificate" href="https://stepik.org/users/1427768870/certificates" target="_blank" rel="noopener noreferrer">
+              <div class="certificate-main"><span class="certificate-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V5m0 14h17M7 15l3-4 3 2 5-7"/></svg></span><div><h3>Basics of Statistics</h3><p>Stepik · 100% completed · With distinction</p></div></div>
+              <div class="certificate-status">COMPLETED<span>STEPik ↗</span></div>
+            </a>
+            <a class="certificate" href="https://stepik.org/users/1427768870/certificates" target="_blank" rel="noopener noreferrer">
+              <div class="certificate-main"><span class="certificate-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8 4 12l4 4M16 8l4 4-4 4M14 5l-4 14"/></svg></span><div><h3>Python Generation — Beginner</h3><p>Stepik · 100% completed · With distinction</p></div></div>
+              <div class="certificate-status">COMPLETED<span>STEPik ↗</span></div>
+            </a>
+            <div class="certificate" style="border-style:dashed; background:rgba(17,24,38,.36)">
+              <div class="certificate-main"><span class="certificate-icon" style="color:var(--blue);border-color:rgba(138,167,255,.2);background:rgba(138,167,255,.07)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6 5.6 18.4"/></svg></span><div><h3>Next: Data Science & Machine Learning</h3><p>Current learning roadmap · In progress / planned</p></div></div>
+              <div class="certificate-status" style="color:var(--blue)">NEXT UP<span>2026 — 2027</span></div>
+            </div>
+          </div>
+        </div>
       </div>
-    </div></section>
+    </section>
 
-    <section id="contact"><div class="wrap">
-      <div class="contact reveal"><div><div class="eyebrow">05 / Contact</div><h2>Let's connect and build something useful.</h2><p>For opportunities, collaboration or a conversation about data and technology.</p></div><div class="actions"><a class="btn primary" href="mailto:YOUR-EMAIL@example.com">Email me ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/YOUR-LINKEDIN/" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></div>
-    </div></section>
+    <section id="journey">
+      <div class="wrap">
+        <div class="section-heading reveal">
+          <div><div class="eyebrow">05 / BACKGROUND</div><h2 class="section-title">The journey so far.</h2></div>
+          <p class="section-intro">A mix of quantitative education, teaching, creative work and independent technical learning.</p>
+        </div>
+        <div class="glass-panel" style="padding:30px clamp(22px,4vw,42px)">
+          <div class="journey">
+            <article class="journey-item reveal"><div class="journey-date">2021 — 2024</div><div class="journey-content"><h3>B.Sc. — Physics, Statistics & Mathematics</h3><p>Completed bachelor's degree with a CGPA of 6.86, building a foundation in quantitative reasoning and mathematical methods.</p></div></article>
+            <article class="journey-item reveal"><div class="journey-date">3 YEARS</div><div class="journey-content"><h3>Teaching Experience</h3><p>Developed communication, explanation and learner-support skills through three years of teaching experience.</p></div></article>
+            <article class="journey-item reveal"><div class="journey-date">2 YEARS</div><div class="journey-content"><h3>Video Editing</h3><p>Built creative production and client-brief execution experience through two years of video editing.</p></div></article>
+            <article class="journey-item reveal"><div class="journey-date">6 MONTHS</div><div class="journey-content"><h3>Computer Applications</h3><p>Completed a six-month computer applications course.</p></div></article>
+            <article class="journey-item reveal"><div class="journey-date">2026 — NOW</div><div class="journey-content"><h3>Independent Python & Quantitative Projects</h3><p>Publishing statistical simulations and data-focused Python projects on GitHub while preparing for more advanced Data Science and Machine Learning work.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-panel reveal">
+          <div><div class="eyebrow">06 / GET IN TOUCH</div><h2>Let's make something meaningful with data.</h2><p>Open to learning opportunities, technical collaboration and conversations around Python, statistics and quantitative problem-solving.</p></div>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:shivammfreestyler@gmail.com">Email me <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="m4 7 8 6 8-6"/></svg></a>
+            <a class="contact-link" href="https://github.com/shivamquantlab" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .9a11.1 11.1 0 0 0-3.51 21.63c.55.1.76-.24.76-.54v-2.1c-3.1.67-3.76-1.31-3.76-1.31-.5-1.28-1.24-1.62-1.24-1.62-1.01-.69.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15.99 1.7 2.6 1.21 3.23.93.1-.72.39-1.21.71-1.49-2.47-.28-5.07-1.24-5.07-5.5 0-1.21.43-2.2 1.15-2.98-.12-.28-.5-1.41.11-2.94 0 0 .94-.3 3.05 1.14a10.6 10.6 0 0 1 5.55 0c2.11-1.44 3.05-1.14 3.05-1.14.61 1.53.23 2.66.11 2.94.72.78 1.15 1.77 1.15 2.98 0 4.27-2.6 5.22-5.08 5.49.4.35.76 1.02.76 2.06v3.07c0 .3.2.65.77.54A11.1 11.1 0 0 0 12 .9Z"/></svg>github.com/shivamquantlab ↗</a>
+            <a class="contact-link" href="https://stepik.org/users/1427768870/certificates" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></svg>View Stepik certificates ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-  <footer class="wrap"><span>© <span id="year"></span> Shivam Malik</span><span>Designed with curiosity · Built for the web</span></footer>
+
+  <footer class="wrap">
+    <span>© <span id="year"></span> Shivam Malik · Built with curiosity.</span>
+    <div class="footer-links"><a href="https://github.com/shivamquantlab" target="_blank" rel="noopener noreferrer">GitHub</a><a href="mailto:shivammfreestyler@gmail.com">Email</a><a href="#home">Back to top ↑</a></div>
+  </footer>
+  <button class="back-top" id="backTop" aria-label="Back to top" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg></button>
+
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const observer = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-    }), {threshold: .12});
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    (() => {
+      const header = document.getElementById('siteHeader');
+      const progress = document.getElementById('topProgress');
+      const backTop = document.getElementById('backTop');
+      const menuToggle = document.getElementById('menuToggle');
+      const navLinks = document.getElementById('navLinks');
+      const navAnchors = [...document.querySelectorAll('.nav-links a')];
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      const onScroll = () => {
+        const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+        const progressValue = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+        progress.style.width = `${progressValue}%`;
+        header.classList.toggle('scrolled', window.scrollY > 16);
+        backTop.classList.toggle('show', window.scrollY > 600);
+      };
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      menuToggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+        menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+      });
+      navAnchors.forEach(link => link.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.setAttribute('aria-label', 'Open menu');
+      }));
+      backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+      const revealItems = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in-view');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+        revealItems.forEach(item => revealObserver.observe(item));
+      } else {
+        revealItems.forEach(item => item.classList.add('in-view'));
+      }
+
+      const sections = [...document.querySelectorAll('main section[id]')];
+      if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              navAnchors.forEach(link => link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`));
+            }
+          });
+        }, { rootMargin: '-35% 0px -55% 0px' });
+        sections.forEach(section => sectionObserver.observe(section));
+      }
+    })();
   </script>
 </body>
 </html>
