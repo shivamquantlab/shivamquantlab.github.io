@@ -2,7 +2,7 @@
 
 Live portfolio: [shivamquantlab.github.io](https://shivamquantlab.github.io)
 
-This repository contains the responsive GitHub Pages portfolio for Shivam Malik. It highlights four earlier statistical computing projects and **10 independent quantitative research projects**. The account currently has **16 public repositories** in total.
+This repository contains the responsive GitHub Pages portfolio for Shivam Malik. It highlights four earlier statistical computing projects and **11 independent quantitative research projects**. The account currently has **17 public repositories** in total.
 
 ## Research data and interpretation
 
