@@ -172,13 +172,17 @@
     .project-symbol { display: grid; place-items: center; width: 48px; height: 48px; margin-top: 30px; border: 1px solid rgba(112,225,214,.2); border-radius: 15px; color: var(--cyan); background: rgba(112,225,214,.07); }
     .project-symbol svg { width: 22px; height: 22px; }
     .project-card h3 { position: relative; z-index: 1; margin: 18px 0 8px; font: 600 1.32rem "Space Grotesk", sans-serif; letter-spacing: -.045em; }
-    .project-card p { position: relative; z-index: 1; max-width: 470px; margin: 0; color: var(--muted); font-size: .84rem; line-height: 1.8; }
+    .project-card p { position: relative; z-index: 1; max-width: 470px; margin: 0; color: var(--muted); font-size: .9rem; line-height: 1.8; }
     .project-bottom { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: auto; padding-top: 24px; }
-    .project-stack { color: var(--subtle); font: .61rem "IBM Plex Mono", monospace; }
+    .project-stack { color: var(--subtle); font: .66rem "IBM Plex Mono", monospace; }
     .project-link { display: inline-flex; align-items: center; gap: 7px; color: var(--lime); font-size: .76rem; font-weight: 700; transition: gap .25s; }
     .project-link:hover { gap: 12px; }
     .project-link svg { width: 14px; height: 14px; }
     .all-projects { display: flex; justify-content: center; margin-top: 28px; }
+    .research-disclaimer { display: grid; grid-template-columns: max-content 1fr; align-items: start; gap: 12px 20px; margin-top: 22px; padding: 18px 20px; border: 1px solid rgba(196,244,107,.22); border-radius: 16px; background: rgba(196,244,107,.045); }
+    .research-disclaimer-label { color: var(--lime); font: .62rem "IBM Plex Mono", monospace; letter-spacing: .07em; }
+    .research-disclaimer p { margin: 0; color: var(--muted); font-size: .82rem; line-height: 1.7; }
+
 
 
     /* Quantitative Research Lab */
@@ -294,6 +298,16 @@
       .lab-workspace { grid-template-columns:1fr; }
       .lab-controls { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); align-items:end; }
       .lab-run { grid-column:1 / -1; }
+    }
+    @media (max-width: 980px) {
+      .nav { height: 70px; }
+      .menu-toggle { display: grid; place-items: center; }
+      .nav-cta { display: none; }
+      .nav-links { position: absolute; top: 70px; left: 0; right: 0; display: flex; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 18px 16px; border-bottom: 1px solid var(--line); background: rgba(8,11,18,.96); backdrop-filter: blur(18px); opacity: 0; visibility: hidden; transform: translateY(-8px); transition: .25s var(--ease); }
+      .nav-links.open { opacity: 1; visibility: visible; transform: none; }
+      .nav-links a { padding: 12px 4px; border-bottom: 1px solid rgba(177,196,224,.08); }
+      .nav-links a:last-child { border-bottom: 0; }
+      .nav-links a::after { display: none; }
     }
     @media (max-width: 760px) {
       .wrap { width: min(var(--max), calc(100% - 36px)); }
@@ -445,7 +459,7 @@
           </article>
           <div class="stats-grid reveal delay-1">
             <div class="stat-card"><span class="stat-accent">01 / EDUCATION</span><strong>6.86</strong><span>B.Sc. CGPA</span></div>
-            <div class="stat-card"><span class="stat-accent">02 / PROJECTS</span><strong>06</strong><span>Public GitHub repositories</span></div>
+            <div class="stat-card"><span class="stat-accent">02 / PROJECTS</span><strong>16</strong><span>Public GitHub repositories</span></div>
             <div class="stat-card"><span class="stat-accent">03 / LEARNING</span><strong>03</strong><span>Completed Stepik certificates</span></div>
             <div class="stat-card"><span class="stat-accent">04 / GRADUATION</span><strong>2024</strong><span>Bachelor's degree</span></div>
           </div>
@@ -492,7 +506,7 @@
       <div class="wrap">
         <div class="section-heading reveal">
           <div><div class="eyebrow">03 / SELECTED WORK</div><h2 class="section-title">Built, tested, published.</h2></div>
-          <p class="section-intro">A selection from my 16 public repositories. Each project is part of my journey toward stronger statistical computing and Python development.</p>
+          <p class="section-intro">A selection from my 16 public repositories, including 10 quantitative research projects and earlier statistical computing work.</p>
         </div>
         <div class="projects-grid">
           <article class="project-card reveal" style="--project-glow:rgba(196,244,107,.2)">
@@ -524,7 +538,7 @@
             <div class="project-bottom"><span class="project-stack">PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/student-performance-analysis" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
         </div>
-        <div class="all-projects reveal"><a class="btn btn-ghost" href="https://github.com/shivamquantlab?tab=repositories" target="_blank" rel="noopener noreferrer">Browse all 16 repositories <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+        <div class="all-projects reveal"><a class="btn btn-ghost" href="https://github.com/shivamquantlab?tab=repositories" target="_blank" rel="noopener noreferrer">Browse all 16 public repositories <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
       </div>
     </section>
 
@@ -630,81 +644,85 @@
     <section id="quant-projects">
       <div class="wrap">
         <div class="section-heading reveal">
-          <div><div class="eyebrow">05 / QUANTITATIVE RESEARCH</div><h2 class="section-title">Research, built to be reproduced.</h2></div>
-          <p class="section-intro">Each independent Python project documents its formulas, assumptions, limitations, and validation. Experiments use synthetic or hand-authored scenarios; results are research demonstrations, not investment performance.</p>
+          <div><div class="eyebrow">05 / 10 QUANTITATIVE RESEARCH PROJECTS</div><h2 class="section-title">Research, built to be reproduced.</h2></div>
+          <p class="section-intro">Ten independently installable Python projects document their methods, assumptions, limitations, and validation. Trading research uses synthetic data; the point-in-time example uses hand-authored records.</p>
         </div>
         <div class="projects-grid">
           <article class="project-card reveal" style="--project-glow:rgba(196,244,107,.2)">
             <div class="project-top"><span class="project-number">QUANT / 001</span><span class="project-type">DATA · POINT-IN-TIME</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Point-in-Time Market Data</h3>
-            <p>Revision-aware snapshots that model what was available at a past decision date.</p>
-            <div class="project-bottom"><span class="project-stack">BITEMPORAL · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/point-in-time-market-data" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>Bitemporal snapshots preserve the difference between when an observation applies and when it became known.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/point-in-time-market-data" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(112,225,214,.2)">
             <div class="project-top"><span class="project-number">QUANT / 002</span><span class="project-type">STATISTICS · RISK</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Returns Analytics</h3>
-            <p>Numerically validated risk summaries on a reproducible synthetic price path.</p>
-            <div class="project-bottom"><span class="project-stack">RETURNS · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/returns-analytics" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>Compounded returns, annualized risk, and drawdowns are computed from a reproducible synthetic price path.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/returns-analytics" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(183,147,255,.2)">
             <div class="project-top"><span class="project-number">QUANT / 003</span><span class="project-type">TIME SERIES · RISK</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Volatility Forecasting</h3>
-            <p>A compact forecast baseline with explicit timing and scaling assumptions.</p>
-            <div class="project-bottom"><span class="project-stack">EWMA · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/volatility-forecasting" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>Lagged EWMA volatility forecasts make information timing, annualization, and forecast evaluation explicit.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/volatility-forecasting" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(255,178,102,.2)">
             <div class="project-top"><span class="project-number">QUANT / 004</span><span class="project-type">CROSS-SECTIONAL · DATA</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Factor Research</h3>
-            <p>A reproducible synthetic panel for studying portfolio sorts and factor returns.</p>
-            <div class="project-bottom"><span class="project-stack">FACTORS · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/factor-research" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>Cross-sectional sorts and long-short spreads are formed from a reproducible synthetic panel.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/factor-research" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(255,126,145,.2)">
             <div class="project-top"><span class="project-number">QUANT / 005</span><span class="project-type">OPTIMIZATION · RISK</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Portfolio Construction</h3>
-            <p>A constrained optimizer with numerical checks and a separate evaluation sample.</p>
-            <div class="project-bottom"><span class="project-stack">OPTIMIZATION · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/portfolio-construction" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>Long-only minimum-variance weights use a checked covariance estimate and a separate evaluation sample.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/portfolio-construction" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(196,244,107,.2)">
             <div class="project-top"><span class="project-number">QUANT / 006</span><span class="project-type">BACKTESTING · COSTS</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Event-Driven Backtesting</h3>
-            <p>A small event loop that makes timing and synthetic execution assumptions explicit.</p>
-            <div class="project-bottom"><span class="project-stack">EVENT-DRIVEN · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/event-driven-backtesting" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>An event loop separates signal timing from next-period fills and records the modeled transaction costs.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/event-driven-backtesting" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(112,225,214,.2)">
             <div class="project-top"><span class="project-number">QUANT / 007</span><span class="project-type">SIGNALS · TIME SERIES</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Time-Series Momentum</h3>
-            <p>Signal construction keeps the decision-time information set separate from the next return.</p>
-            <div class="project-bottom"><span class="project-stack">MOMENTUM · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/time-series-momentum" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>Lagged trend signals are evaluated against subsequent synthetic returns with an explicit cost scenario.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/time-series-momentum" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(183,147,255,.2)">
             <div class="project-top"><span class="project-number">QUANT / 008</span><span class="project-type">SPREADS · TIME SERIES</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Pairs Trading</h3>
-            <p>A synthetic cointegrated-style example with formation and evaluation periods separated.</p>
-            <div class="project-bottom"><span class="project-stack">PAIRS · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/pairs-trading" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>The hedge ratio is estimated in the formation window, then spread signals are evaluated on a held-out period.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/pairs-trading" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(255,178,102,.2)">
             <div class="project-top"><span class="project-number">QUANT / 009</span><span class="project-type">DERIVATIVES · NUMERICS</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Options Analytics</h3>
-            <p>Numerical option analytics under documented European-style model assumptions.</p>
-            <div class="project-bottom"><span class="project-stack">OPTIONS · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/options-analytics" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>European Black–Scholes prices, Greeks, and implied volatility are computed under documented model assumptions.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/options-analytics" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
           <article class="project-card reveal" style="--project-glow:rgba(255,126,145,.2)">
             <div class="project-top"><span class="project-number">QUANT / 010</span><span class="project-type">RISK · VALIDATION</span></div>
             <div class="project-symbol"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19h18M5 16c2-1 2-8 5-8s3 7 5 7 3-8 6-9"/><path d="M5 5v14"/></svg></div>
             <h3>Tail-Risk Validation</h3>
-            <p>A synthetic validation exercise for quantile risk forecasts and realized exceptions.</p>
-            <div class="project-bottom"><span class="project-stack">VaR · ES · PYTHON</span><a class="project-link" href="https://github.com/shivamquantlab/tail-risk-validation" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
+            <p>Walk-forward VaR and Expected Shortfall forecasts are checked against subsequent synthetic losses and exceptions.</p>
+            <div class="project-bottom"><span class="project-stack">PYTHON · NUMPY · MATPLOTLIB</span><a class="project-link" href="https://github.com/shivamquantlab/tail-risk-validation" target="_blank" rel="noopener noreferrer">View repository <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M7 7h10v10"/></svg></a></div>
           </article>
         </div>
+        <aside class="research-disclaimer" aria-label="Research data disclaimer">
+          <span class="research-disclaimer-label">DATA &amp; PERFORMANCE NOTE</span>
+          <p>Trading research uses synthetic data only. The point-in-time example uses hand-authored records. These demonstrations are not real market results and provide no evidence of real investment returns.</p>
+        </aside>
       </div>
     </section>
 
